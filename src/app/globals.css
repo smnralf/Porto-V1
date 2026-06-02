@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* ── Dark editorial palette ── */
+  --color-base:        #0B0B0F;   /* main bg */
+  --color-surface:     #1A1A1A;   /* card / panel bg */
+  --color-surface-alt: #222226;   /* section variation */
+  --color-paper:       #F4F1E8;   /* cream light panel */
+  --color-main:        #F5F2EA;   /* primary text on dark */
+  --color-muted:       #B8B2A7;   /* secondary text on dark */
+  --color-ember:       #FF4D00;   /* orange — CTA / highlights */
+  --color-velvet:      #7C3AED;   /* violet — frontend / creative */
+  --color-lime:        #B6FF4D;   /* lime — status / success */
+  --color-ink:         #111111;   /* dark — borders on light panels */
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #0B0B0F;
+  color: #F5F2EA;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Grain texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  mix-blend-mode: overlay;
+}
+
+::selection { background-color: #FF4D00; color: #fff; }
+
+/* Scrollbar */
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: #0B0B0F; }
+::-webkit-scrollbar-thumb  { background: #333; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #FF4D00; }
+
+/* ─── Colored panel cards (light bg on dark) ─── */
+/* Hard shadow only makes sense on light-bg panels — ink is visible there */
+.panel-paper {
+  background: #F4F1E8;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 0 #111111;
+}
+.panel-velvet {
+  background: #7C3AED;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 0 #111111;
+}
+.panel-lime {
+  background: #B6FF4D;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 0 #111111;
+}
+.panel-ember {
+  background: #FF4D00;
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 0 #111111;
+}
+
+/* Smaller shadow variants */
+.panel-paper-sm  { background: #F4F1E8; border: 2px solid #111111; box-shadow: 3px 3px 0 0 #111111; }
+.panel-velvet-sm { background: #7C3AED; border: 2px solid #111111; box-shadow: 3px 3px 0 0 #111111; }
+.panel-lime-sm   { background: #B6FF4D; border: 2px solid #111111; box-shadow: 3px 3px 0 0 #111111; }
+.panel-ember-sm  { background: #FF4D00; border: 2px solid #111111; box-shadow: 3px 3px 0 0 #111111; }
+
+/* ─── Dark surface card ─── */
+.card-dark {
+  background: #1A1A1A;
+  border: 1px solid rgba(245, 242, 234, 0.1);
+}
+
+/* ─── Hard shadow utilities (visible on colored panels) ─── */
+.shadow-hard-sm  { box-shadow: 2px 2px 0 0 #111111; }
+.shadow-hard     { box-shadow: 4px 4px 0 0 #111111; }
+.shadow-hard-lg  { box-shadow: 6px 6px 0 0 #111111; }
+.shadow-hard-xl  { box-shadow: 8px 8px 0 0 #111111; }
+
+/* ─── Button hover (hard-shadow lift) ─── */
+.btn-hard {
+  box-shadow: 3px 3px 0 0 #111111;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-hard:hover  { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 0 #111111; }
+.btn-hard:active { transform: translate(0, 0);       box-shadow: 1px 1px 0 0 #111111; }
+
+/* ─── Section dividers ─── */
+/* On dark bg: subtle light rule */
+.section-rule { border-top: 1px solid rgba(245, 242, 234, 0.1); }
+/* On light/cream bg: strong ink rule */
+.section-rule-ink { border-top: 2px solid #111111; }
+
+/* ─── Shine sweep ─── */
+.shine-card { position: relative; overflow: hidden; }
+.shine-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.07) 50%, transparent 80%);
+  transform: translateX(-100%);
+  transition: transform 0.7s ease;
+}
+.shine-card:hover::after { transform: translateX(100%); }
+
+/* ─── Marquee ─── */
+@keyframes marquee-fwd { from { transform: translateX(0);    } to { transform: translateX(-50%); } }
+@keyframes marquee-rev { from { transform: translateX(-50%); } to { transform: translateX(0);    } }
+.animate-marquee-fwd { animation: marquee-fwd 38s linear infinite; }
+.animate-marquee-rev { animation: marquee-rev 42s linear infinite; }
