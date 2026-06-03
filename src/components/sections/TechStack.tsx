@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { techStack } from "@/data/tech-stack";
+import RevealClip from "@/components/ui/RevealClip";
 
 const allTechs = techStack.flatMap((g) =>
   g.items.map((item) => ({ name: item.name, category: g.category, primary: item.level === "primary" }))
@@ -27,12 +28,16 @@ export default function TechStack() {
           transition={{ duration: 0.5 }}
           className="mb-10"
         >
-          <span className="inline-block border border-ember/30 bg-ember/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-ember mb-4">
-            Tech Stack
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-main leading-tight tracking-tight">
-            Teknologi yang saya kuasai.
-          </h2>
+          <RevealClip inline>
+            <span className="inline-block border border-ember/30 bg-ember/10 px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-ember mb-4">
+              Tech Stack
+            </span>
+          </RevealClip>
+          <RevealClip delay={0.08}>
+            <h2 className="h2-display font-black text-main mt-4">
+              Teknologi yang saya kuasai.
+            </h2>
+          </RevealClip>
         </motion.div>
 
         <motion.div
@@ -58,18 +63,24 @@ export default function TechStack() {
         </motion.div>
       </div>
 
-      {/* Row 1 — forward */}
-      <div className="relative mb-3">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 z-10 bg-gradient-to-r from-surface-alt to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 z-10 bg-gradient-to-l from-surface-alt to-transparent" />
-        <div className="flex gap-2.5 animate-marquee-fwd" style={{ width: "max-content" }}>
+      {/* Row 1 — forward, pauses on hover via group */}
+      <div className="relative mb-3 group">
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 z-10 bg-gradient-to-r from-surface-alt to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 z-10 bg-gradient-to-l from-surface-alt to-transparent" />
+        <div
+          className="flex gap-2.5 animate-marquee-fwd group-hover:[animation-play-state:paused]"
+          style={{ width: "max-content" }}
+        >
           {row1.map((tech, i) => {
             const s = CAT_STYLE[tech.category];
             return (
-              <div key={`r1-${i}`} className="flex-shrink-0 flex items-center gap-2 border px-4 py-2.5"
-                style={{ background: s.bg, borderColor: s.border }}>
+              <div
+                key={`r1-${i}`}
+                className="flex-shrink-0 flex items-center gap-2.5 border px-4 py-2.5"
+                style={{ background: s.bg, borderColor: s.border }}
+              >
                 <span className="h-2 w-2 flex-shrink-0 rounded-full" style={{ background: s.color }} />
-                <span className="text-sm font-semibold" style={{ color: tech.primary ? s.color : "#B8B2A7" }}>
+                <span className="text-sm font-semibold whitespace-nowrap" style={{ color: tech.primary ? s.color : "#B8B2A7" }}>
                   {tech.name}
                 </span>
               </div>
@@ -78,18 +89,24 @@ export default function TechStack() {
         </div>
       </div>
 
-      {/* Row 2 — reverse */}
-      <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-20 z-10 bg-gradient-to-r from-surface-alt to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 z-10 bg-gradient-to-l from-surface-alt to-transparent" />
-        <div className="flex gap-2.5 animate-marquee-rev" style={{ width: "max-content" }}>
+      {/* Row 2 — reverse, pauses on hover via group */}
+      <div className="relative group">
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 z-10 bg-gradient-to-r from-surface-alt to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 z-10 bg-gradient-to-l from-surface-alt to-transparent" />
+        <div
+          className="flex gap-2.5 animate-marquee-rev group-hover:[animation-play-state:paused]"
+          style={{ width: "max-content" }}
+        >
           {row2.map((tech, i) => {
             const s = CAT_STYLE[tech.category];
             return (
-              <div key={`r2-${i}`} className="flex-shrink-0 flex items-center gap-2 border px-4 py-2.5 bg-base"
-                style={{ borderColor: "rgba(245,242,234,0.08)" }}>
+              <div
+                key={`r2-${i}`}
+                className="flex-shrink-0 flex items-center gap-2.5 border px-4 py-2.5 bg-base"
+                style={{ borderColor: "rgba(245,242,234,0.08)" }}
+              >
                 <span className="h-2 w-2 flex-shrink-0 rounded-full" style={{ background: s.color }} />
-                <span className="text-sm font-medium text-muted">{tech.name}</span>
+                <span className="text-sm font-medium text-muted whitespace-nowrap">{tech.name}</span>
               </div>
             );
           })}

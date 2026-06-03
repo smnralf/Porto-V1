@@ -19,10 +19,10 @@ export default function ProjectTeaser() {
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 py-5">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <div className="h-[2px] w-4 bg-ember" />
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">Cuplikan project</p>
+            <div className="h-[2px] w-4 bg-white/30" />
+            <p className="text-[0.65rem] font-black uppercase tracking-widest text-muted">Cuplikan project</p>
           </div>
-          <Link href="/projects" className="inline-flex items-center gap-1 text-[11px] font-black text-ember hover:underline">
+          <Link href="/projects" className="inline-flex items-center gap-1 text-[11px] font-black text-main underline underline-offset-2 hover:text-ember transition-colors">
             Semua <ArrowRight className="h-3 w-3" />
           </Link>
         </div>

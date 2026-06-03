@@ -88,7 +88,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
                 </div>
 
                 <a
-                  href={`https://wa.me/6281234567890?text=${encodeURIComponent(service.whatsappMessage)}`}
+                  href={`https://wa.me/6285176828884?text=${encodeURIComponent(service.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-4 py-3 text-[13px] font-black text-ink btn-hard w-full"

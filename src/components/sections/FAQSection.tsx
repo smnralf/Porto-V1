@@ -19,10 +19,10 @@ export default function FAQSection() {
           transition={{ duration: 0.5 }}
           className="mb-10"
         >
-          <span className="inline-block border border-ember/30 bg-ember/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-ember mb-4">
+          <span className="inline-block border border-ember/30 bg-ember/10 px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-ember mb-4">
             FAQ
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-main leading-tight tracking-tight">
+          <h2 className="h2-display font-black text-main">
             Pertanyaan yang sering ditanya.
           </h2>
         </motion.div>

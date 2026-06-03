@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import RevealClip from "@/components/ui/RevealClip";
 import { Smartphone, Code2, Search, CloudUpload, Wrench, MessageSquare } from "lucide-react";
 
 const reasons = [
@@ -23,10 +24,10 @@ export default function WhyWorkWithMe() {
           transition={{ duration: 0.5 }}
           className="mb-10"
         >
-          <span className="inline-block border border-white/12 bg-surface px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-muted mb-4">
+          <span className="inline-block border border-white/12 bg-surface px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-muted mb-4">
             Keunggulan
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-main leading-tight tracking-tight">Kenapa pilih saya?</h2>
+          <h2 className="h2-display font-black text-main">Kenapa pilih saya?</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -40,7 +41,7 @@ export default function WhyWorkWithMe() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 whileHover={{ y: -4 }}
-                className="border border-white/8 bg-surface p-6 flex flex-col gap-4 hover:border-white/15 transition-colors"
+                className="card-depth-2 p-6 flex flex-col gap-4 transition-colors"
               >
                 <div
                   className="flex h-10 w-10 items-center justify-center border"

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import RevealClip from "@/components/ui/RevealClip";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getFeaturedProjects } from "@/data/projects";
@@ -14,15 +15,15 @@ export default function FeaturedProjects() {
       <div className="border-b border-white/8 bg-surface px-5 sm:px-6 lg:px-8 py-4">
         <div className="mx-auto max-w-6xl flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <span className="inline-block border border-velvet/30 bg-velvet/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-velvet">
+            <span className="inline-block border border-velvet/30 bg-velvet/10 px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-velvet">
               Hasil Kerja
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-main tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-main tracking-tight">
               Project pilihan.
             </h2>
           </div>
           <Link href="/projects"
-            className="hidden sm:inline-flex items-center gap-2 text-[12px] font-black text-ember hover:underline">
+            className="hidden sm:inline-flex items-center gap-2 text-[12px] font-black text-main underline underline-offset-2 hover:text-ember transition-colors">
             Semua <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>

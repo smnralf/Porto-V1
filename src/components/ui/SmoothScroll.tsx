@@ -6,16 +6,20 @@ import { MotionConfig } from "framer-motion";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    /* Respect prefers-reduced-motion — disable Lenis, fall back to native scroll */
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    /* Lenis auto-disables on touch devices internally */
+
     const lenis = new Lenis({
-      duration: 1.1,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      lerp: 0.08,
+      smoothWheel: true,
     });
 
+    /* Sync Lenis raf with requestAnimationFrame so framer-motion useScroll works */
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
     const id = requestAnimationFrame(raf);
 
     return () => {
@@ -25,7 +29,8 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
   }, []);
 
   return (
-    <MotionConfig reducedMotion="user">
+    /* MotionConfig handles prefers-reduced-motion for all framer-motion animations */
+    <MotionConfig reducedMotion="never">
       {children}
     </MotionConfig>
   );

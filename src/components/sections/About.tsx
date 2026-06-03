@@ -1,19 +1,70 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, animate, useInView, useReducedMotion } from "framer-motion";
+import RevealClip from "@/components/ui/RevealClip";
 
-const STATS = [
-  { value: "5+",    label: "Project selesai",  cls: "panel-paper",  textVal: "text-ember",   textLbl: "text-ink/70" },
-  { value: "2022",  label: "Mulai coding",      cls: "card-dark",    textVal: "text-main",    textLbl: "text-muted" },
-  { value: "Open",  label: "For freelance",     cls: "panel-lime",   textVal: "text-ink",     textLbl: "text-ink/70" },
+/* ── CountUp: animates from `from` to `to` when entering viewport ── */
+function CountUp({
+  from,
+  to,
+  suffix = "",
+  className,
+}: {
+  from: number;
+  to: number;
+  suffix?: string;
+  className?: string;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const [val, setVal] = useState(from);
+  const prefersReduced = useReducedMotion();
+  const started = useRef(false);
+
+  useEffect(() => {
+    if (!isInView || started.current) return;
+    started.current = true;
+
+    if (prefersReduced) {
+      setVal(to);
+      return;
+    }
+
+    const controls = animate(from, to, {
+      duration: 1.4,
+      ease: "easeOut",
+      onUpdate: (v) => setVal(Math.round(v)),
+    });
+    return () => controls.stop();
+  }, [isInView, from, to, prefersReduced]);
+
+  return (
+    <span ref={ref} className={className}>
+      {val}
+      {suffix}
+    </span>
+  );
+}
+
+/* ── Stat definitions ── */
+type NumStat  = { kind: "num";  from: number; to: number; suffix?: string; label: string; cls: string; textVal: string; textLbl: string };
+type TextStat = { kind: "text"; value: string;            label: string; cls: string; textVal: string; textLbl: string };
+type Stat = NumStat | TextStat;
+
+const STATS: Stat[] = [
+  { kind: "num",  from: 0,    to: 5,    suffix: "+", label: "Project selesai", cls: "panel-paper",  textVal: "text-ember", textLbl: "text-ink/70" },
+  { kind: "num",  from: 2018, to: 2022,              label: "Mulai coding",    cls: "card-dark",    textVal: "text-main",  textLbl: "text-muted" },
+  { kind: "text", value: "Open",                     label: "For freelance",   cls: "panel-lime",   textVal: "text-ink",   textLbl: "text-ink/70" },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="px-5 sm:px-6 lg:px-8 py-16 bg-base section-rule scroll-mt-16">
+    <section id="about" className="px-5 sm:px-6 lg:px-8 py-32 bg-base section-rule scroll-mt-16">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
 
+          {/* Left: copy */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -22,13 +73,17 @@ export default function About() {
             className="lg:col-span-2 flex flex-col gap-5"
           >
             <div>
-              <span className="inline-block border border-white/15 bg-surface px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-muted mb-5">
-                Tentang Saya
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-main leading-tight tracking-tight">
-                Developer yang suka membangun{" "}
-                <span className="text-ember">hal yang nyata.</span>
-              </h2>
+              <RevealClip inline delay={0}>
+                <span className="inline-block border border-white/15 bg-surface px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-muted mb-5">
+                  Tentang Saya
+                </span>
+              </RevealClip>
+              <RevealClip delay={0.08}>
+                <h2 className="h2-display font-black text-main">
+                  Developer yang suka membangun{" "}
+                  <span className="text-ember">hal yang nyata.</span>
+                </h2>
+              </RevealClip>
             </div>
 
             <div className="flex flex-col gap-3 text-[15px] text-muted leading-relaxed max-w-2xl">
@@ -39,9 +94,9 @@ export default function About() {
               </p>
               <p>
                 Terbiasa mengerjakan{" "}
-                <span className="font-black text-velvet">frontend</span> dengan React &
+                <span className="font-bold text-main">frontend</span> dengan React &amp;
                 Next.js,{" "}
-                <span className="font-black text-ember">backend dasar</span> dengan PHP & Laravel,
+                <span className="font-bold text-main">backend dasar</span> dengan PHP &amp; Laravel,
                 database MySQL, serta deployment end-to-end.
               </p>
               <p>
@@ -51,15 +106,23 @@ export default function About() {
             </div>
 
             <div className="flex flex-wrap gap-2 pt-1">
-              {["Informatika Student", "React / Next.js", "PHP / Laravel", "MySQL", "Git"].map((tag, i) => (
+              <span className="border-2 border-ink bg-lime px-3 py-1 text-[11px] font-black text-ink shadow-hard-sm">
+                Informatika Student
+              </span>
+              {["React / Next.js", "PHP / Laravel"].map((tag) => (
                 <span
                   key={tag}
                   className="border px-3 py-1 text-[11px] font-bold"
-                  style={{
-                    borderColor: i === 0 ? "rgba(182,255,77,0.3)" : i < 3 ? "rgba(124,58,237,0.3)" : "rgba(245,242,234,0.12)",
-                    color: i === 0 ? "#B6FF4D" : i < 3 ? "#7C3AED" : "#B8B2A7",
-                    background: i === 0 ? "rgba(182,255,77,0.08)" : i < 3 ? "rgba(124,58,237,0.08)" : "rgba(245,242,234,0.04)",
-                  }}
+                  style={{ borderColor: "rgba(124,58,237,0.35)", color: "#7C3AED", background: "rgba(124,58,237,0.08)" }}
+                >
+                  {tag}
+                </span>
+              ))}
+              {["MySQL", "Git"].map((tag) => (
+                <span
+                  key={tag}
+                  className="border px-3 py-1 text-[11px] font-bold"
+                  style={{ borderColor: "rgba(245,242,234,0.12)", color: "#B8B2A7", background: "rgba(245,242,234,0.04)" }}
                 >
                   {tag}
                 </span>
@@ -67,6 +130,7 @@ export default function About() {
             </div>
           </motion.div>
 
+          {/* Right: stats with counter animation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +140,13 @@ export default function About() {
           >
             {STATS.map((s) => (
               <div key={s.label} className={`${s.cls} p-5 flex flex-col gap-0.5`}>
-                <div className={`text-4xl font-black leading-none ${s.textVal}`}>{s.value}</div>
+                <div className={`text-4xl font-black leading-none ${s.textVal}`}>
+                  {s.kind === "num" ? (
+                    <CountUp from={s.from} to={s.to} suffix={s.suffix} />
+                  ) : (
+                    s.value
+                  )}
+                </div>
                 <div className={`text-[12px] font-bold ${s.textLbl}`}>{s.label}</div>
               </div>
             ))}

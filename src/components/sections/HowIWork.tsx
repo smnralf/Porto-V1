@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import RevealClip from "@/components/ui/RevealClip";
 
 const steps = [
   { num: "01", title: "Konsultasi Kebutuhan",    desc: "Diskusi mendalam mengenai tujuan, target pengguna, dan kebutuhan website Anda." },
@@ -12,6 +13,7 @@ const steps = [
   { num: "07", title: "Serah Terima",             desc: "Dokumentasi, akses, dan penjelasan penggunaan diserahkan kepada Anda." },
 ];
 
+/* Lime only as accent bar/dot — step number uses it at very low opacity as decoration */
 const STEP_COLORS = ["#FF4D00", "#7C3AED", "#B6FF4D", "#FF4D00", "#7C3AED", "#B6FF4D", "#FF4D00"];
 
 export default function HowIWork() {
@@ -25,10 +27,10 @@ export default function HowIWork() {
           transition={{ duration: 0.5 }}
           className="mb-10"
         >
-          <span className="inline-block border border-velvet/30 bg-velvet/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-velvet mb-4">
+          <span className="inline-block border border-velvet/30 bg-velvet/10 px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-velvet mb-4">
             Proses Kerja
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-main leading-tight tracking-tight">Bagaimana saya bekerja.</h2>
+          <h2 className="h2-display font-black text-main">Bagaimana saya bekerja.</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -39,7 +41,7 @@ export default function HowIWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
-              className="border border-white/8 bg-base p-5 flex flex-col gap-3"
+              className="card-depth-2 p-5 flex flex-col gap-3"
             >
               <span className="text-[28px] font-black leading-none" style={{ color: `${STEP_COLORS[i]}35` }}>
                 {step.num}

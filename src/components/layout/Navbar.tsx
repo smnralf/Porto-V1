@@ -38,9 +38,9 @@ export default function Navbar() {
       )}
     >
       <nav className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
-        <div className="flex h-[58px] items-center justify-between">
+        <div className="flex h-[68px] items-center justify-between">
 
-          <Link href="/" className="group font-mono text-[15px] font-black text-main hover:text-ember transition-colors select-none">
+          <Link href="/" className="group font-mono text-[18px] font-black text-main hover:text-ember transition-colors select-none">
             smnralf<span className="text-ember group-hover:text-main transition-colors">_</span>
           </Link>
 
@@ -52,11 +52,13 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative text-sm font-semibold transition-colors py-1",
-                    "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:rounded-full after:transition-all after:duration-200",
+                    "relative text-[0.875rem] tracking-[0.02em] font-semibold transition-colors py-1",
+                    /* Underline: scaleX 0→1 from the left on hover, stays at 1 when active */
+                    "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px]",
+                    "after:origin-left after:transition-transform after:duration-200",
                     active
-                      ? "text-main after:bg-ember"
-                      : "text-muted hover:text-main after:bg-transparent hover:after:bg-white/20"
+                      ? "text-main after:bg-ember after:scale-x-100"
+                      : "text-muted hover:text-main after:bg-white/30 after:scale-x-0 hover:after:scale-x-100"
                   )}
                 >
                   {link.label}
@@ -67,7 +69,7 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <a
-              href={`https://wa.me/6281234567890?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
+              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border-2 border-ink bg-ember px-4 py-2 text-[13px] font-black text-ink btn-hard"
@@ -105,7 +107,7 @@ export default function Navbar() {
               );
             })}
             <a
-              href={`https://wa.me/6281234567890?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
+              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-4 py-3 text-sm font-black text-ink btn-hard"

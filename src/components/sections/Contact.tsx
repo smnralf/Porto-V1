@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import RevealClip from "@/components/ui/RevealClip";
 import { MessageCircle, GitBranch } from "lucide-react";
 
 export default function Contact() {
@@ -14,11 +15,11 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="max-w-xl"
         >
-          <span className="inline-block border border-white/15 bg-surface px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-muted mb-5">
+          <span className="inline-block border border-white/15 bg-surface px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-muted mb-5">
             Hubungi Saya
           </span>
 
-          <h2 className="text-3xl sm:text-4xl font-black text-main leading-tight tracking-tight mb-4">
+          <h2 className="h2-display font-black text-main mb-4">
             Ada proyek atau pertanyaan?
           </h2>
           <p className="text-[15px] text-muted leading-relaxed mb-8">
@@ -28,7 +29,7 @@ export default function Contact() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href={`https://wa.me/6281234567890?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
+              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-6 py-3.5 text-[14px] font-black text-ink btn-hard"
@@ -37,7 +38,7 @@ export default function Contact() {
               Konsultasi via WhatsApp
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/smnralf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-paper px-6 py-3.5 text-[14px] font-black text-ink btn-hard"

@@ -6,68 +6,61 @@ import Link from "next/link";
 
 export default function ContactCTA() {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20">
+    <section className="px-5 sm:px-6 lg:px-8 py-20 bg-base section-rule">
       <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative overflow-hidden rounded-3xl p-8 sm:p-14 text-center"
-          style={{
-            background: "linear-gradient(135deg, rgba(182,255,77,0.07) 0%, #11131F 50%, rgba(124,92,255,0.07) 100%)",
-            border: "1px solid rgba(255,255,255,0.07)",
-          }}
+          className="relative overflow-hidden border-2 border-white/12 bg-surface p-8 sm:p-14 text-center"
         >
-          {/* Corner blobs */}
+          {/* Background blobs */}
           <div
             aria-hidden
             className="pointer-events-none absolute -top-24 -left-24 h-64 w-64 rounded-full blur-3xl"
-            style={{ background: "rgba(182,255,77,0.08)" }}
+            style={{ background: "rgba(182,255,77,0.06)" }}
           />
           <div
             aria-hidden
             className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full blur-3xl"
-            style={{ background: "rgba(124,92,255,0.08)" }}
+            style={{ background: "rgba(124,58,237,0.06)" }}
           />
 
-          {/* Decoration line */}
+          {/* Top accent line */}
           <div
             aria-hidden
-            className="absolute top-0 left-1/2 -translate-x-1/2 h-[1px] w-48"
-            style={{
-              background: "linear-gradient(to right, transparent, rgba(182,255,77,0.5), transparent)",
-            }}
+            className="absolute top-0 left-1/2 -translate-x-1/2 h-[2px] w-32"
+            style={{ background: "#FF4D00" }}
           />
 
           <div className="relative">
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-spark mb-4">
+            <span className="inline-block border-2 border-ink bg-lime px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-ink mb-5 shadow-hard-sm">
               Siap Mulai?
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-snow mb-4">
-              Wujudkan Website Impian Anda
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-main mb-4 leading-tight tracking-tight">
+              Wujudkan Website Anda Sekarang
             </h2>
-            <p className="text-ash mb-10 max-w-md mx-auto text-[15px] leading-relaxed">
-              Konsultasikan kebutuhan website Anda sekarang. Gratis, tanpa komitmen,
-              dan langsung dapat estimasi harga.
+            <p className="text-muted mb-10 max-w-md mx-auto text-[15px] leading-relaxed">
+              Konsultasikan kebutuhan website Anda. Gratis, tanpa komitmen, dan langsung dapat estimasi harga.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href={`https://wa.me/6281234567890?text=${encodeURIComponent("Halo, saya ingin konsultasi terkait pembuatan website.")}`}
+                href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin konsultasi terkait pembuatan website.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-spark px-8 py-4 text-[15px] font-bold text-ink-900 hover:brightness-110 active:scale-[0.97] transition-all shadow-[0_0_32px_rgba(182,255,77,0.3)]"
+                className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-8 py-4 text-[15px] font-black text-ink btn-hard"
               >
-                <MessageCircle className="h-[18px] w-[18px]" />
+                <MessageCircle className="h-5 w-5" />
                 Konsultasi via WhatsApp
               </a>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-8 py-4 text-[15px] font-semibold text-snow hover:bg-white/[0.07] hover:border-white/16 active:scale-[0.97] transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/15 bg-surface-alt px-8 py-4 text-[15px] font-black text-main hover:border-white/25 transition-colors btn-hard"
               >
                 Lihat Semua Layanan
-                <ArrowRight className="h-4 w-4 text-ash" />
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

@@ -76,15 +76,11 @@ export default async function ProjectDetailPage(props: PageProps<"/projects/[slu
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <section className={card}>
                 <h2 className="text-base font-black text-main mb-3 border-b border-white/8 pb-2">Problem</h2>
-                <p className="text-[13px] text-muted leading-relaxed">
-                  Banyak pengguna kesulitan mengingat jadwal dan dosis obat secara konsisten, yang berdampak pada efektivitas pengobatan.
-                </p>
+                <p className="text-[13px] text-muted leading-relaxed">{project.problem}</p>
               </section>
               <section className={card}>
                 <h2 className="text-base font-black text-main mb-3 border-b border-white/8 pb-2">Solution</h2>
-                <p className="text-[13px] text-muted leading-relaxed">
-                  Membangun aplikasi web berbasis browser yang ringan dan mudah digunakan, dengan fitur pengingat jadwal yang dapat diakses tanpa instalasi.
-                </p>
+                <p className="text-[13px] text-muted leading-relaxed">{project.solution}</p>
               </section>
             </div>
 
