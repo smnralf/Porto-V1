@@ -45,21 +45,31 @@ export default function ProjectTeaser() {
                   className="block border border-white/10 bg-base hover:border-white/20 transition-all duration-100"
                 >
                   {/* Thumbnail */}
-                  <div className="h-14 relative overflow-hidden" style={{ background: `${color}10` }}>
-                    <div className="absolute inset-2 flex items-center gap-2">
-                      <div className="h-7 w-7 flex-shrink-0" style={{ background: color, opacity: 0.9 }} />
-                      <div className="flex flex-col gap-1.5 flex-1">
-                        <div className="h-1.5 w-3/4" style={{ background: `${color}40` }} />
-                        <div className="h-1 w-1/2" style={{ background: `${color}25` }} />
-                        <div className="flex gap-1">
-                          <div className="h-3 flex-1 border border-white/10" style={{ background: `${color}18` }} />
-                          <div className="h-3 w-6" style={{ background: `${color}12` }} />
+                  <div className="h-24 relative overflow-hidden bg-surface-alt">
+                    {project.screenshots && project.screenshots.length > 0 ? (
+                      <img 
+                        src={project.screenshots[0]} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover object-top"
+                      />
+                    ) : (
+                      <div className="absolute inset-0" style={{ background: `${color}10` }}>
+                        <div className="absolute inset-4 flex items-center gap-3">
+                          <div className="h-8 w-8 flex-shrink-0" style={{ background: color, opacity: 0.9 }} />
+                          <div className="flex flex-col gap-2 flex-1">
+                            <div className="h-2 w-3/4" style={{ background: `${color}40` }} />
+                            <div className="h-1.5 w-1/2" style={{ background: `${color}25` }} />
+                            <div className="flex gap-1.5 mt-1">
+                              <div className="h-4 flex-1 border border-white/10" style={{ background: `${color}18` }} />
+                              <div className="h-4 w-8" style={{ background: `${color}12` }} />
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="absolute top-1.5 right-1.5">
+                    )}
+                    <div className="absolute top-1.5 right-1.5 shadow-md">
                       <span
-                        className="text-[9px] font-black px-1.5 py-0.5 uppercase tracking-wide"
+                        className="text-[9px] font-black px-1.5 py-0.5 uppercase tracking-wide shadow-hard-sm"
                         style={{ background: color, color: isLight ? "#111" : "#fff" }}
                       >
                         {project.status}

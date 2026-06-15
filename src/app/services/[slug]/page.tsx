@@ -93,10 +93,10 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-4 py-3 text-[13px] font-black text-ink btn-hard w-full"
                 >
-                  <MessageCircle className="h-4 w-4" /> Konsultasi Sekarang
+                  <MessageCircle className="h-4 w-4" /> Mari Berdiskusi
                 </a>
 
-                <p className="text-[11px] text-muted text-center">Gratis konsultasi · Tanpa komitmen</p>
+                <p className="text-[11px] text-muted text-center">Mari berdiskusi · Tanpa komitmen</p>
 
                 <div className="border-t border-white/8 pt-4">
                   <p className="text-[10px] font-black uppercase tracking-wider text-muted mb-2">Termasuk:</p>

@@ -287,6 +287,13 @@ export default function LoadingScreen() {
 
     const isDev = process.env.NODE_ENV === "development";
 
+    /* Mobile: skip loading screen entirely, stay hidden */
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      setLSDone();
+      window.dispatchEvent(new Event("ls:done"));
+      return;
+    }
+
     /* Prod: skip if already shown this browser session */
     if (!isDev && sessionStorage.getItem(SESSION_KEY)) {
       setLSDone();
@@ -321,7 +328,8 @@ export default function LoadingScreen() {
         if (exiting) {
           setLSDone();
           window.dispatchEvent(new CustomEvent("ls:done"));
-          setShouldRender(false);
+          /* Give Hero time to receive event before unmount */
+          setTimeout(() => setShouldRender(false), 100);
         }
       }}
     >

@@ -60,7 +60,7 @@ const STATS: Stat[] = [
 
 export default function About() {
   return (
-    <section id="about" className="px-5 sm:px-6 lg:px-8 py-32 bg-base section-rule scroll-mt-16">
+    <section id="about" className="px-5 sm:px-6 lg:px-8 pt-10 pb-16 bg-base section-rule scroll-mt-16">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
 
@@ -70,11 +70,11 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-2 flex flex-col gap-5"
+            className="lg:col-span-2 flex flex-col gap-3"
           >
             <div>
               <RevealClip inline delay={0}>
-                <span className="inline-block border border-white/15 bg-surface px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-muted mb-5">
+                <span className="inline-block border border-white/15 bg-surface px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-muted mb-3">
                   Tentang Saya
                 </span>
               </RevealClip>

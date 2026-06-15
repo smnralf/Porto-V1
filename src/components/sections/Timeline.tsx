@@ -43,7 +43,7 @@ const EVENTS = [
 
 export default function Timeline() {
   return (
-    <section id="timeline" className="px-5 sm:px-6 lg:px-8 py-40 bg-surface section-rule scroll-mt-16">
+    <section id="timeline" className="px-5 sm:px-6 lg:px-8 py-16 bg-surface section-rule scroll-mt-16">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -31,12 +31,12 @@ function BentoCard({
 }
 
 const BENTO_PROJECTS = [
-  { name: "Sehatin", tech: "PHP",    color: "#FF4D00" },
-  { name: "Listify", tech: "JS",     color: "#7C3AED" },
-  { name: "XAUUSD",  tech: "Next.js",color: "#B6FF4D" },
+  { name: "XAUUSD",  tech: "Next.js / FastAPI", color: "#FF4D00" },
+  { name: "NextPos", tech: "Laravel 12",      color: "#B6FF4D" },
+  { name: "HRIS",    tech: "Laravel / PHP",   color: "#7C3AED" },
 ];
 const FRONTEND = ["React", "Next.js", "TypeScript", "Tailwind"];
-const BACKEND  = ["PHP", "Laravel", "MySQL", "Node.js"];
+const BACKEND  = ["PHP", "Laravel", "MySQL", "FastAPI"];
 
 export default function Hero() {
   const [ready, setReady] = useState(false);
@@ -69,15 +69,16 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    /* Start immediately if loading screen already finished */
-    if (isLSDone()) { setReady(true); return; }
+    if (isLSDone()) {
+      setReady(true);
+      return;
+    }
 
-    let fired = false;
-    const handler = () => { fired = true; setReady(true); };
+    const handler = () => setReady(true);
     window.addEventListener("ls:done", handler, { once: true });
 
-    /* Fallback: always start within 3.2s from mount */
-    const fallback = setTimeout(() => { if (!fired) setReady(true); }, 3200);
+    /* Fallback: if event never fires, show after 4s */
+    const fallback = setTimeout(() => setReady(true), 4000);
 
     return () => {
       window.removeEventListener("ls:done", handler);
@@ -130,25 +131,25 @@ export default function Hero() {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: d(2) }}
               >
                 <span className="h-2 w-2 rounded-full bg-ink animate-pulse" />
-                Tersedia untuk freelance
+                Open for project
               </motion.span>
             </motion.div>
 
             {/* "Hi, saya" */}
-            <h1 className="flex flex-col gap-0.5">
+            <h1 className="flex flex-col gap-1">
               <span className="overflow-hidden block">
                 <motion.span
                   initial={{ y: "110%", opacity: 0 }}
                   animate={ready ? { y: "0%", opacity: 1 } : {}}
                   transition={{ duration: 0.4, delay: d(0), ease: "easeOut" }}
-                  className="block text-[1.4rem] sm:text-[1.7rem] font-black text-muted leading-tight"
+                  className="block text-[1.8rem] sm:text-[2.2rem] lg:text-[2.5rem] font-black text-muted leading-tight"
                 >
                   Hi, saya
                 </motion.span>
               </span>
 
               {/* "smnralf." — always visible, scramble is the animation */}
-              <span className="block text-[4rem] sm:text-[5rem] lg:text-[5.5rem] font-black text-ember leading-[0.88] tracking-tight">
+              <span className="block text-[5rem] sm:text-[6.5rem] lg:text-[7.5rem] font-black text-ember leading-[0.88] tracking-tight">
                 {displayText}
               </span>
             </h1>
@@ -158,10 +159,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 8 }}
               animate={ready ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: d(0.6), ease: "easeOut" }}
-              className="flex items-center gap-1.5"
+              className="flex items-center gap-2 mt-2"
             >
-              <MapPin className="h-3.5 w-3.5 text-muted" />
-              <span className="text-[12px] font-semibold text-muted">Karimunjawa, Indonesia</span>
+              <MapPin className="h-4 w-4 text-muted" />
+              <span className="text-[14px] lg:text-[15px] font-semibold text-muted">Karimunjawa, Indonesia</span>
             </motion.div>
 
             {/* Value prop */}
@@ -169,11 +170,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={ready ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: d(0.7), ease: "easeOut" }}
-              className="text-[15px] sm:text-[16px] text-muted leading-relaxed max-w-[500px]"
+              className="text-[16px] sm:text-[18px] lg:text-[20px] text-muted leading-relaxed max-w-[600px] mt-2"
             >
-              Membangun website untuk{" "}
-              <span className="font-black text-main">bisnis, UMKM, dan personal brand</span>
-              {" "}— dari landing page sederhana sampai aplikasi web dengan panel admin.
+              Berfokus pada pengembangan antarmuka yang bersih, responsif, dan fungsional.{" "}
+              <span className="font-black text-main">Mengubah ide menjadi barisan kode</span>
+              {" "}untuk menciptakan pengalaman digital yang optimal.
             </motion.p>
 
             {/* Stack line */}
@@ -181,7 +182,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={ready ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.45, delay: d(0.8), ease: "easeOut" }}
-              className="text-[13px] text-muted/70 max-w-[480px]"
+              className="text-[14px] lg:text-[15px] text-muted/70 max-w-[500px]"
             >
               Stack:{" "}
               <span className="font-bold text-velvet">React / Next.js</span>
@@ -196,11 +197,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={ready ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: d(0.9), ease: "easeOut" }}
-              className="flex flex-col sm:flex-row gap-3 pt-1"
+              className="flex flex-col sm:flex-row gap-4 pt-4"
             >
               <Link href="/projects"
-                className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-7 py-3.5 text-[14px] font-black text-ink btn-hard">
-                Lihat Project <ArrowRight className="h-4 w-4" />
+                className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-8 py-4 text-[15px] lg:text-[16px] font-black text-ink btn-hard">
+                Lihat Project <ArrowRight className="h-5 w-5" />
               </Link>
               <motion.a
                 href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
@@ -208,10 +209,10 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={ready ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: d(0.95), ease: "easeOut" }}
-                className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-paper px-7 py-3.5 text-[14px] font-black text-ink btn-hard"
+                className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-paper px-8 py-4 text-[15px] lg:text-[16px] font-black text-ink btn-hard"
               >
-                <MessageCircle className="h-4 w-4" />
-                Konsultasi Gratis
+                <MessageCircle className="h-5 w-5" />
+                Mari Berdiskusi
               </motion.a>
             </motion.div>
 
@@ -220,67 +221,68 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={ready ? { opacity: 1 } : {}}
               transition={{ duration: 0.4, delay: d(1.05) }}
+              className="mt-2"
             >
               <Link href="/services"
-                className="inline-flex items-center gap-1.5 text-[12px] font-bold text-muted hover:text-ember transition-colors">
-                Lihat Layanan &amp; Harga <ArrowRight className="h-3 w-3" />
+                className="inline-flex items-center gap-2 text-[14px] font-bold text-muted hover:text-ember transition-colors">
+                Lihat Layanan &amp; Harga <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </motion.div>
           </div>
 
           {/* RIGHT: Bento grid — mount-triggered, 0.08s stagger, first card at 0.3s */}
-          <div className="hidden lg:grid grid-cols-2 gap-2.5">
-            <BentoCard ready={ready} delay={0.30} rotate={-0.5} className="panel-paper p-5 flex flex-col gap-3 relative">
+          <div className="hidden lg:grid grid-cols-2 gap-4">
+            <BentoCard ready={ready} delay={0.30} rotate={-0.5} className="panel-paper p-6 flex flex-col gap-4 relative">
               <div className="inline-block -rotate-1 self-start">
-                <span className="inline-block bg-ember border border-ink px-2.5 py-0.5 text-[9px] font-black uppercase tracking-[0.12em] text-ink shadow-hard-sm">Informatika</span>
+                <span className="inline-block bg-ember border border-ink px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-ink shadow-hard-sm">Informatika</span>
               </div>
               <div>
-                <div className="text-[22px] font-black text-ink leading-none tracking-tight">smnralf</div>
-                <div className="text-[11px] font-semibold text-ink/60 mt-0.5">Web Developer</div>
+                <div className="text-[28px] font-black text-ink leading-none tracking-tight">smnralf</div>
+                <div className="text-[13px] font-semibold text-ink/60 mt-1">Web Developer</div>
               </div>
-              <div className="border-t border-ink/15 pt-2 flex items-center gap-1.5">
+              <div className="border-t border-ink/15 pt-3 flex items-center gap-2 mt-auto">
                 <span className="h-2 w-2 rounded-full bg-lime flex-shrink-0 border border-ink/20" />
-                <span className="text-[10px] font-black text-ink/70 uppercase tracking-[0.1em]">Open for freelance</span>
+                <span className="text-[11px] font-black text-ink/70 uppercase tracking-[0.1em]">Open for project</span>
               </div>
             </BentoCard>
 
-            <BentoCard ready={ready} delay={0.38} rotate={0.5} className="card-dark p-4 flex flex-col gap-3">
+            <BentoCard ready={ready} delay={0.38} rotate={0.5} className="card-dark p-5 flex flex-col gap-4">
               <div className="flex items-center justify-between">
-                <p className="text-[9px] font-black uppercase tracking-[0.2em] text-muted">Projects</p>
-                <span className="border-2 border-ink bg-paper px-1.5 py-0.5 text-[10px] font-black text-ink shadow-hard-sm">5+</span>
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">Projects</p>
+                <span className="border-2 border-ink bg-paper px-2 py-0.5 text-[11px] font-black text-ink shadow-hard-sm">5+</span>
               </div>
-              <div className="flex flex-col gap-0.5 flex-1">
+              <div className="flex flex-col gap-1.5 flex-1">
                 {BENTO_PROJECTS.map((p) => (
-                  <div key={p.name} className="flex items-center gap-2 py-1.5 border-b border-white/5 last:border-0">
-                    <div className="h-2.5 w-2.5 flex-shrink-0" style={{ background: p.color }} />
-                    <span className="text-[11px] font-semibold text-main flex-1">{p.name}</span>
-                    <span className="text-[10px] text-muted font-mono">{p.tech}</span>
+                  <div key={p.name} className="flex items-center gap-3 py-2 border-b border-white/5 last:border-0">
+                    <div className="h-3 w-3 flex-shrink-0" style={{ background: p.color }} />
+                    <span className="text-[13px] font-semibold text-main flex-1">{p.name}</span>
+                    <span className="text-[11px] text-muted font-mono">{p.tech}</span>
                   </div>
                 ))}
               </div>
-              <div className="border-t border-white/8 pt-2">
-                <span className="text-[10px] font-bold text-muted">Case study tersedia →</span>
+              <div className="border-t border-white/8 pt-3 mt-1">
+                <span className="text-[11px] font-bold text-muted">Case study tersedia →</span>
               </div>
             </BentoCard>
 
-            <BentoCard ready={ready} delay={0.46} rotate={0.3} className="panel-velvet p-4 flex flex-col gap-3">
-              <p className="text-[9px] font-black uppercase tracking-[0.2em] text-white/50">Frontend</p>
-              <div className="flex flex-wrap gap-1.5">
+            <BentoCard ready={ready} delay={0.46} rotate={0.3} className="panel-velvet p-5 flex flex-col gap-4">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/50">Frontend</p>
+              <div className="flex flex-wrap gap-2">
                 {FRONTEND.map((t) => (
-                  <span key={t} className="border border-white/25 bg-white/12 px-2 py-0.5 text-[10px] font-bold text-white">{t}</span>
+                  <span key={t} className="border border-white/25 bg-white/12 px-2.5 py-1 text-[11px] font-bold text-white">{t}</span>
                 ))}
               </div>
             </BentoCard>
 
-            <BentoCard ready={ready} delay={0.54} rotate={-0.3} className="panel-lime p-4 flex flex-col gap-3">
-              <p className="text-[9px] font-black uppercase tracking-[0.2em] text-ink/60">Backend</p>
-              <div className="flex flex-wrap gap-1.5">
+            <BentoCard ready={ready} delay={0.54} rotate={-0.3} className="panel-lime p-5 flex flex-col gap-4">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-ink/60">Backend</p>
+              <div className="flex flex-wrap gap-2">
                 {BACKEND.map((t) => (
-                  <span key={t} className="border border-ink/25 bg-ink/10 px-2 py-0.5 text-[10px] font-bold text-ink">{t}</span>
+                  <span key={t} className="border border-ink/25 bg-ink/10 px-2.5 py-1 text-[11px] font-bold text-ink">{t}</span>
                 ))}
               </div>
-              <div className="mt-auto pt-1">
-                <span className="text-[10px] font-black text-ink">⚡ Full stack delivery</span>
+              <div className="mt-auto pt-2">
+                <span className="text-[11px] font-black text-ink">⚡ Full stack delivery</span>
               </div>
             </BentoCard>
           </div>

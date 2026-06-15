@@ -42,18 +42,18 @@ export default function ContactCTA() {
               Wujudkan Website Anda Sekarang
             </h2>
             <p className="text-muted mb-10 max-w-md mx-auto text-[15px] leading-relaxed">
-              Konsultasikan kebutuhan website Anda. Gratis, tanpa komitmen, dan langsung dapat estimasi harga.
+              Diskusikan kebutuhan website Anda. Gratis, tanpa komitmen, dan langsung dapat estimasi harga.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin konsultasi terkait pembuatan website.")}`}
+                href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi terkait pembuatan website.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-8 py-4 text-[15px] font-black text-ink btn-hard"
               >
                 <MessageCircle className="h-5 w-5" />
-                Konsultasi via WhatsApp
+                Mari Berdiskusi via WhatsApp
               </a>
               <Link
                 href="/services"

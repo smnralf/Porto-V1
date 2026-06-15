@@ -62,7 +62,7 @@ export default function Footer() {
             <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">Kontak</h3>
             <div className="flex flex-col gap-2.5">
               <a
-                href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin konsultasi.")}`}
+                href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted hover:text-ember transition-colors w-fit"
@@ -83,13 +83,13 @@ export default function Footer() {
 
             {/* Quick CTA */}
             <a
-              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin konsultasi gratis.")}`}
+              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-2 border-2 border-ink bg-ember px-4 py-2 text-[12px] font-black text-ink btn-hard w-fit"
             >
               <MessageCircle className="h-3.5 w-3.5" />
-              Konsultasi Gratis
+              Mari Berdiskusi
             </a>
           </div>
         </div>

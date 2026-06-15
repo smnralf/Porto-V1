@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import RevealClip from "@/components/ui/RevealClip";
 
 const steps = [
-  { num: "01", title: "Konsultasi Kebutuhan",    desc: "Diskusi mendalam mengenai tujuan, target pengguna, dan kebutuhan website Anda." },
+  { num: "01", title: "Diskusi Kebutuhan",    desc: "Diskusi mendalam mengenai tujuan, target pengguna, dan kebutuhan website Anda." },
   { num: "02", title: "Scope & Estimasi Harga",  desc: "Menetapkan fitur, halaman, teknologi, timeline, dan estimasi harga secara transparan." },
   { num: "03", title: "Desain Tampilan",          desc: "Menyusun tampilan visual sesuai brand dan preferensi Anda." },
   { num: "04", title: "Development",              desc: "Pengembangan website menggunakan teknologi modern dengan kode bersih." },

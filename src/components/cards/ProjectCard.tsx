@@ -97,11 +97,10 @@ function MockUI({ accent, pattern }: { accent: string; pattern: "grid" | "list" 
 function Thumbnail({ project }: { project: Project }) {
   const t = THUMB[project.category] ?? { bg: "#111", accent: "#FF4D00", pattern: "list" as const };
   const sc = STATUS_STYLE[project.status] ?? STATUS_STYLE["Concept"];
+  const firstScreenshot = project.screenshots?.[0];
 
   return (
-    /* Thumbnail height: 220px per spec */
     <div className="relative overflow-hidden shine-card flex-shrink-0" style={{ height: 220, background: t.bg }}>
-      {/* Status badge — 0.6rem tracking-widest, top-left, no radius */}
       <div className="absolute top-3 left-3 z-10">
         <span
           className="text-[0.6rem] font-black uppercase tracking-widest px-2 py-0.5"
@@ -110,13 +109,24 @@ function Thumbnail({ project }: { project: Project }) {
           {project.status}
         </span>
       </div>
-      <div
-        className="absolute right-3 top-1/2 -translate-y-1/2 text-[90px] font-black leading-none select-none pointer-events-none"
-        style={{ color: `${t.accent}07` }}
-      >
-        {project.title.charAt(0)}
-      </div>
-      <MockUI accent={t.accent} pattern={t.pattern} />
+      {firstScreenshot ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={firstScreenshot}
+          alt={project.title}
+          style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
+        />
+      ) : (
+        <>
+          <div
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[90px] font-black leading-none select-none pointer-events-none"
+            style={{ color: `${t.accent}07` }}
+          >
+            {project.title.charAt(0)}
+          </div>
+          <MockUI accent={t.accent} pattern={t.pattern} />
+        </>
+      )}
       <div
         className="absolute bottom-0 left-0 right-0 h-10 pointer-events-none"
         style={{ background: `linear-gradient(to top, ${t.bg}, transparent)` }}

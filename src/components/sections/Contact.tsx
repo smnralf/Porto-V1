@@ -35,7 +35,7 @@ export default function Contact() {
               className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-6 py-3.5 text-[14px] font-black text-ink btn-hard"
             >
               <MessageCircle className="h-4 w-4" />
-              Konsultasi via WhatsApp
+              Mari Berdiskusi via WhatsApp
             </a>
             <a
               href="https://github.com/smnralf"

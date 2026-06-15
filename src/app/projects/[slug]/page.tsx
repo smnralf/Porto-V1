@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, GitBranch, ExternalLink } from "lucide-react";
 import { getProjectBySlug, projects } from "@/data/projects";
 import Badge from "@/components/ui/Badge";
@@ -60,12 +61,29 @@ export default async function ProjectDetailPage(props: PageProps<"/projects/[slu
 
       <div className="px-5 sm:px-6 lg:px-8 py-10">
         <div className="mx-auto max-w-4xl">
-          {/* Screenshot placeholder */}
-          <div className="border border-white/8 h-56 sm:h-72 mb-8 flex items-center justify-center relative overflow-hidden bg-surface">
-            <div className="absolute inset-0 opacity-[0.03]"
-              style={{ backgroundImage: "linear-gradient(rgba(245,242,234,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(245,242,234,0.5) 1px,transparent 1px)", backgroundSize: "32px 32px" }} />
-            <span className="text-[80px] font-black text-white/5 select-none relative z-10">{project.title.charAt(0)}</span>
-          </div>
+          {/* Screenshots */}
+          {project.screenshots && project.screenshots.length > 0 ? (
+            <div className="mb-8 flex flex-col gap-4">
+              {project.screenshots.map((src, i) => (
+                <div key={i} className="border border-white/8 overflow-hidden">
+                  <Image
+                    src={src}
+                    alt={`${project.title} screenshot ${i + 1}`}
+                    width={0}
+                    height={0}
+                    sizes="(max-width: 768px) 100vw, 896px"
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="border border-white/8 h-56 sm:h-72 mb-8 flex items-center justify-center relative overflow-hidden bg-surface">
+              <div className="absolute inset-0 opacity-[0.03]"
+                style={{ backgroundImage: "linear-gradient(rgba(245,242,234,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(245,242,234,0.5) 1px,transparent 1px)", backgroundSize: "32px 32px" }} />
+              <span className="text-[80px] font-black text-white/5 select-none relative z-10">{project.title.charAt(0)}</span>
+            </div>
+          )}
 
           <div className="grid grid-cols-1 gap-4">
             <section className={card}>
