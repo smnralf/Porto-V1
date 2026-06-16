@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, MapPin } from "lucide-react";
+import { ArrowRight, MessageCircle, MapPin, User } from "lucide-react";
 import Link from "next/link";
 import { isLSDone } from "@/lib/loading-signal";
 
@@ -154,15 +154,22 @@ export default function Hero() {
               </span>
             </h1>
 
-            {/* Location */}
+            {/* Name & Location */}
             <motion.div
               initial={{ opacity: 0, y: 8 }}
               animate={ready ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: d(0.6), ease: "easeOut" }}
-              className="flex items-center gap-2 mt-2"
+              className="flex flex-wrap items-center gap-3 mt-2"
             >
-              <MapPin className="h-4 w-4 text-muted" />
-              <span className="text-[14px] lg:text-[15px] font-semibold text-muted">Karimunjawa, Indonesia</span>
+              <div className="flex items-center gap-1.5">
+                <User className="h-4 w-4 text-muted" />
+                <span className="text-[14px] lg:text-[15px] font-semibold text-muted">Soma Nur Alif</span>
+              </div>
+              <span className="text-muted/40 hidden sm:inline">•</span>
+              <div className="flex items-center gap-1.5">
+                <MapPin className="h-4 w-4 text-muted" />
+                <span className="text-[14px] lg:text-[15px] font-semibold text-muted">Karimunjawa, Indonesia</span>
+              </div>
             </motion.div>
 
             {/* Value prop */}

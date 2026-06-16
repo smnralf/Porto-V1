@@ -7,6 +7,7 @@ export interface Project {
   longDescription: string;
   problem: string;
   solution: string;
+  result: string;
   techStack: string[];
   features: string[];
   screenshots: string[];
@@ -29,6 +30,8 @@ export const projects: Project[] = [
       "Trader XAUUSD seringkali harus membuka banyak sumber data terpisah — berita ekonomi, kalender ekonomi, indikator teknikal — yang membuang waktu dan menyulitkan proses pengambilan keputusan.",
     solution:
       "Membangun dashboard analitik dengan Next.js dan FastAPI yang mengintegrasikan data makroekonomi (CPI, Fed Rate, Real Rate, dll), harga live emas & DXY, dan model Random Forest untuk prediksi arah pergerakan harga dalam satu tampilan terpadu.",
+    result:
+      "Menghasilkan sebuah konsep dashboard interaktif yang berpotensi memangkas waktu riset trader secara drastis dengan menyajikan data fundamental dan prediktif dalam satu layar ringkas.",
     techStack: ["Next.js 16", "TypeScript", "FastAPI", "Python", "scikit-learn", "Recharts", "pandas", "yfinance"],
     features: [
       "Visualisasi data fundamental XAUUSD",
@@ -58,6 +61,8 @@ export const projects: Project[] = [
       "Pengelolaan data karyawan, absensi, dan penggajian yang masih dilakukan secara manual menyebabkan inefisiensi operasional, risiko kesalahan data, dan sulitnya akses informasi secara real-time.",
     solution:
       "Membangun sistem HRIS berbasis web dengan Laravel yang mengotomasi seluruh proses HR — dari pencatatan absensi harian hingga kalkulasi gaji — dalam satu platform terpusat yang bisa diakses oleh admin dan karyawan.",
+    result:
+      "Proses manajemen data karyawan menjadi terotomatisasi, mengurangi human-error dalam perhitungan absensi dan penggajian, serta memudahkan akses informasi secara transparan bagi seluruh karyawan.",
     techStack: ["PHP", "Laravel", "Tailwind CSS", "JavaScript", "AJAX", "MySQL"],
     features: [
       "Manajemen data karyawan",
@@ -69,6 +74,8 @@ export const projects: Project[] = [
     screenshots: [
       "/screenshots/hris/Hris1.png",
       "/screenshots/hris/HRIS2.png",
+      "/screenshots/hris/Hris3.png",
+      "/screenshots/hris/Hris4.png",
     ],
     liveUrl: undefined,
     githubUrl: undefined,
@@ -86,6 +93,8 @@ export const projects: Project[] = [
       "Banyak pengguna, terutama lansia, kesulitan mengingat jadwal dan dosis obat secara konsisten. Kelalaian ini berdampak langsung pada efektivitas pengobatan dan kesehatan jangka panjang.",
     solution:
       "Membangun aplikasi web berbasis browser yang ringan dan mudah diakses tanpa instalasi. Pengguna cukup membuka browser, mengatur jadwal obat, dan mendapatkan pengingat secara otomatis.",
+    result:
+      "Menghasilkan aplikasi pengingat yang sangat ramah pengguna dengan notifikasi tepat waktu, membantu pengguna (khususnya lansia) untuk terus mematuhi jadwal minum obat mereka.",
     techStack: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
     features: [
       "Pengingat jadwal minum obat",
@@ -111,6 +120,8 @@ export const projects: Project[] = [
       "Banyak UMKM dan bisnis lokal belum memiliki website yang representatif, sehingga kehilangan kepercayaan calon pelanggan yang pertama kali mencari informasi bisnis secara online.",
     solution:
       "Membuat demo company profile modern berbasis Next.js dengan desain responsif, performa tinggi, dan struktur yang mudah dikustomisasi sesuai identitas bisnis klien.",
+    result:
+      "Terciptanya sebuah template dasar berkualitas tinggi yang mempercepat proses pembuatan website profesional untuk UMKM, dilengkapi dengan desain responsif dan skor performa yang optimal.",
     techStack: ["Next.js", "Tailwind CSS"],
     features: [
       "Desain modern dan responsif",
@@ -136,6 +147,8 @@ export const projects: Project[] = [
       "Banyak bisnis kecil dan menengah menggunakan sistem kasir manual atau software lama yang lambat, tidak terintegrasi dengan stok, dan tidak menghasilkan laporan penjualan yang akurat.",
     solution:
       "Membangun aplikasi POS berbasis web dengan Laravel 12 yang mengintegrasikan kasir, manajemen stok, dan laporan penjualan dalam satu platform — dengan antarmuka responsif menggunakan Tailwind CSS dan Alpine.js.",
+    result:
+      "Aplikasi berhasil mengintegrasikan modul kasir dan stok, memberikan kemudahan bagi pemilik bisnis untuk memantau penjualan harian serta sisa barang secara real-time dari mana saja.",
     techStack: ["Laravel 12", "PHP 8.2", "Tailwind CSS", "Alpine.js", "MySQL", "Blade", "Vite"],
     features: [
       "Role admin & kasir dengan akses berbeda",

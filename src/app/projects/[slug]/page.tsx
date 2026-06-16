@@ -127,7 +127,7 @@ export default async function ProjectDetailPage(props: PageProps<"/projects/[slu
             <section className={card}>
               <h2 className="text-base font-black text-main mb-3 border-b border-white/8 pb-2">Hasil</h2>
               <p className="text-[14px] text-muted leading-relaxed">
-                Project ini berhasil mendemonstrasikan kemampuan membangun aplikasi web fungsional dengan fokus pada user experience yang sederhana namun efektif.
+                {project.result}
               </p>
             </section>
           </div>
