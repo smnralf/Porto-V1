@@ -72,7 +72,7 @@ export default function Navbar() {
               href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border-2 border-ink bg-ember px-4 py-2 text-[13px] font-black text-ink btn-hard"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-[13px] font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,255,255,0.1)]"
             >
               Hubungi Saya
             </a>
@@ -110,7 +110,7 @@ export default function Navbar() {
               href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-4 py-3 text-sm font-black text-ink btn-hard"
+              className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-bold text-black shadow-[0_0_15px_rgba(255,255,255,0.1)]"
             >
               Hubungi Saya
             </a>

@@ -14,56 +14,36 @@ import { type Service } from "@/data/services";
  *  ALL price text → white (#F5F2EA)
  */
 type Tier = {
-  cardBorder: string;
-  cardBg:     string;
+  cardClass:   string;
   checkColor: string;
-  btnBorder:  string;
-  btnBg:      string;
-  btnText:    string;
-  popularBg:  string;
-  popularText:string;
+  btnClass:    string;
+  popularClass:string;
 };
 
 const TIER: Record<string, Tier> = {
   "landing-page": {
-    cardBorder:  "1px solid #2a2a2a",
-    cardBg:      "#161616",
-    checkColor:  "#B8B2A7",
-    btnBorder:   "rgba(245,242,234,0.2)",
-    btnBg:       "transparent",
-    btnText:     "#B8B2A7",
-    popularBg:   "#F5F2EA",
-    popularText: "#111",
+    cardClass:   "border border-white/10 bg-surface/50 backdrop-blur-md",
+    checkColor:  "#94A3B8",
+    btnClass:    "border border-white/10 bg-white/5 text-white hover:bg-white/10",
+    popularClass:"bg-surface-alt text-white border border-white/10",
   },
   "web-statis-company-profile": {
-    cardBorder:  "2px solid #FF4D00",
-    cardBg:      "rgba(255,77,0,0.05)",
-    checkColor:  "#FF4D00",
-    btnBorder:   "#FF4D00",
-    btnBg:       "rgba(255,77,0,0.08)",
-    btnText:     "#FF4D00",
-    popularBg:   "#FF4D00",
-    popularText: "#111",
+    cardClass:   "border border-[#06B6D4]/50 bg-[#06B6D4]/5 backdrop-blur-md shadow-[0_0_20px_rgba(6,182,212,0.15)]",
+    checkColor:  "#06B6D4",
+    btnClass:    "bg-[#06B6D4] text-black font-bold shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:scale-105 active:scale-95",
+    popularClass:"bg-[#06B6D4] text-black shadow-[0_0_10px_rgba(6,182,212,0.3)]",
   },
   "web-dinamis-admin-panel": {
-    cardBorder:  "2px solid #7C3AED",
-    cardBg:      "rgba(124,58,237,0.05)",
-    checkColor:  "#7C3AED",
-    btnBorder:   "#7C3AED",
-    btnBg:       "rgba(124,58,237,0.1)",
-    btnText:     "#7C3AED",
-    popularBg:   "#7C3AED",
-    popularText: "#fff",
+    cardClass:   "border border-[#8B5CF6]/50 bg-[#8B5CF6]/5 backdrop-blur-md",
+    checkColor:  "#8B5CF6",
+    btnClass:    "border border-[#8B5CF6] bg-[#8B5CF6]/10 text-[#8B5CF6] hover:bg-[#8B5CF6]/20",
+    popularClass:"bg-[#8B5CF6] text-white",
   },
   "custom-web-app": {
-    cardBorder:  "2px solid #84cc16",
-    cardBg:      "rgba(132,204,22,0.04)",
-    checkColor:  "#84cc16",
-    btnBorder:   "#84cc16",
-    btnBg:       "rgba(132,204,22,0.08)",
-    btnText:     "#84cc16",
-    popularBg:   "#84cc16",
-    popularText: "#111",
+    cardClass:   "border border-[#10B981]/50 bg-[#10B981]/5 backdrop-blur-md",
+    checkColor:  "#10B981",
+    btnClass:    "border border-[#10B981] bg-[#10B981]/10 text-[#10B981] hover:bg-[#10B981]/20",
+    popularClass:"bg-[#10B981] text-[#020617]",
   },
 };
 
@@ -74,16 +54,12 @@ export default function ServiceCard({ service }: { service: Service }) {
 
   return (
     <motion.article
-      whileHover={{ y: -5 }}
-      transition={{ duration: 0.18 }}
-      className="relative flex flex-col h-full transition-colors duration-200"
-      style={{ background: tier.cardBg, border: tier.cardBorder }}
+      className={`relative flex flex-col h-full transition-all duration-300 rounded-xl hover:-translate-y-1 ${tier.cardClass}`}
     >
       {service.highlighted && (
         <div className="absolute top-4 right-4 z-10">
           <span
-            className="text-[0.6rem] font-black uppercase tracking-widest px-2 py-0.5"
-            style={{ background: tier.popularBg, color: tier.popularText }}
+            className={`text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full ${tier.popularClass}`}
           >
             Populer
           </span>
@@ -124,12 +100,7 @@ export default function ServiceCard({ service }: { service: Service }) {
             href={`https://wa.me/6285176828884?text=${encodeURIComponent(service.whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-[13px] font-black transition-all"
-            style={{
-              border: `1px solid ${tier.btnBorder}`,
-              color: tier.btnText,
-              background: tier.btnBg,
-            }}
+            className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 text-[13px] font-bold transition-all rounded-full ${tier.btnClass}`}
           >
             <MessageCircle className="h-4 w-4" />
             Pesan Sekarang

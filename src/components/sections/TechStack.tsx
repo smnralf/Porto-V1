@@ -11,10 +11,10 @@ const row1 = [...allTechs, ...allTechs];
 const row2 = [...allTechs.slice().reverse(), ...allTechs.slice().reverse()];
 
 const CAT_STYLE: Record<string, { color: string; bg: string; border: string }> = {
-  Frontend: { color: "#7C3AED", bg: "rgba(124,58,237,0.12)", border: "rgba(124,58,237,0.3)" },
-  Backend:  { color: "#FF4D00", bg: "rgba(255,77,0,0.12)",   border: "rgba(255,77,0,0.3)" },
-  Database: { color: "#B6FF4D", bg: "rgba(182,255,77,0.12)", border: "rgba(182,255,77,0.3)" },
-  Tools:    { color: "#B8B2A7", bg: "rgba(184,178,167,0.08)", border: "rgba(184,178,167,0.2)" },
+  Frontend: { color: "#8B5CF6", bg: "rgba(139,92,246,0.12)", border: "rgba(139,92,246,0.3)" },
+  Backend:  { color: "#06B6D4", bg: "rgba(6,182,212,0.12)",   border: "rgba(6,182,212,0.3)" },
+  Database: { color: "#10B981", bg: "rgba(16,185,129,0.12)", border: "rgba(16,185,129,0.3)" },
+  Tools:    { color: "#94A3B8", bg: "rgba(148,163,184,0.08)", border: "rgba(148,163,184,0.2)" },
 };
 
 export default function TechStack() {
@@ -29,7 +29,7 @@ export default function TechStack() {
           className="mb-10"
         >
           <RevealClip inline>
-            <span className="inline-block border border-ember/30 bg-ember/10 px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-ember mb-4">
+            <span className="inline-block rounded-full border border-ember/30 bg-ember/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-ember mb-4">
               Tech Stack
             </span>
           </RevealClip>
@@ -52,7 +52,7 @@ export default function TechStack() {
             return (
               <span
                 key={group.category}
-                className="inline-flex items-center gap-2 border px-3 py-1.5 text-[12px] font-bold"
+                className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-[12px] font-bold"
                 style={{ color: s.color, borderColor: s.border, background: s.bg }}
               >
                 <span className="h-2 w-2 rounded-full" style={{ background: s.color }} />
@@ -76,7 +76,7 @@ export default function TechStack() {
             return (
               <div
                 key={`r1-${i}`}
-                className="flex-shrink-0 flex items-center gap-2.5 border px-4 py-2.5"
+                className="flex-shrink-0 flex items-center gap-2.5 rounded-xl border px-4 py-2.5"
                 style={{ background: s.bg, borderColor: s.border }}
               >
                 <span className="h-2 w-2 flex-shrink-0 rounded-full" style={{ background: s.color }} />
@@ -102,8 +102,8 @@ export default function TechStack() {
             return (
               <div
                 key={`r2-${i}`}
-                className="flex-shrink-0 flex items-center gap-2.5 border px-4 py-2.5 bg-base"
-                style={{ borderColor: "rgba(245,242,234,0.08)" }}
+                className="flex-shrink-0 flex items-center gap-2.5 rounded-xl border px-4 py-2.5 bg-base"
+                style={{ borderColor: "rgba(255,255,255,0.08)" }}
               >
                 <span className="h-2 w-2 flex-shrink-0 rounded-full" style={{ background: s.color }} />
                 <span className="text-sm font-medium text-muted whitespace-nowrap">{tech.name}</span>

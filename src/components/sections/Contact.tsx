@@ -15,7 +15,7 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="max-w-xl"
         >
-          <span className="inline-block border border-white/15 bg-surface px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-muted mb-5">
+          <span className="inline-block rounded-full border border-white/15 bg-surface px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-muted mb-5">
             Hubungi Saya
           </span>
 
@@ -32,7 +32,7 @@ export default function Contact() {
               href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-6 py-3.5 text-[14px] font-black text-ink btn-hard"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-[14px] font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             >
               <MessageCircle className="h-4 w-4" />
               Mari Berdiskusi via WhatsApp
@@ -41,7 +41,7 @@ export default function Contact() {
               href="https://github.com/smnralf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-paper px-6 py-3.5 text-[14px] font-black text-ink btn-hard"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-[14px] font-bold text-white backdrop-blur-md transition-colors hover:bg-white/10 hover:border-white/20"
             >
               <GitBranch className="h-4 w-4" />
               Lihat GitHub

@@ -4,8 +4,7 @@ import ProjectTeaser from "@/components/sections/ProjectTeaser";
 import About from "@/components/sections/About";
 import TechStack from "@/components/sections/TechStack";
 import Timeline from "@/components/sections/Timeline";
-import FreelanceCTA from "@/components/sections/FreelanceCTA";
-import Contact from "@/components/sections/Contact";
+import ContactCTA from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
   title: "smnralf — Web Developer",
@@ -19,10 +18,8 @@ export default function HomePage() {
       <Hero />
       <ProjectTeaser />
       <About />
-      <TechStack />
       <Timeline />
-      <FreelanceCTA />
-      <Contact />
+      <ContactCTA />
     </>
   );
 }

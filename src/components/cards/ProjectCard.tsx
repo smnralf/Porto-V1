@@ -6,17 +6,17 @@ import { ExternalLink, BookOpen } from "lucide-react";
 import { type Project } from "@/data/projects";
 
 const THUMB: Record<string, { bg: string; accent: string; pattern: "grid" | "list" | "dashboard" }> = {
-  "Web App":         { bg: "#0F0805", accent: "#FF4D00", pattern: "list"      },
-  "Company Profile": { bg: "#0B0916", accent: "#7C3AED", pattern: "grid"      },
-  "Dashboard":       { bg: "#050E18", accent: "#2563EB", pattern: "dashboard" },
+  "Web App":         { bg: "#020617", accent: "#06B6D4", pattern: "list"      },
+  "Company Profile": { bg: "#0F172A", accent: "#8B5CF6", pattern: "grid"      },
+  "Dashboard":       { bg: "#020617", accent: "#10B981", pattern: "dashboard" },
 };
 
 const STATUS_STYLE: Record<string, { bg: string; text: string }> = {
-  "Case Study": { bg: "#FF4D00", text: "#111" },
-  "Prototype":  { bg: "#7C3AED", text: "#fff" },
-  "Demo":       { bg: "#F4F1E8", text: "#111" },
-  "Concept":    { bg: "#222",    text: "#B8B2A7" },
-  "Live":       { bg: "#B6FF4D", text: "#111" },
+  "Case Study": { bg: "#06B6D4", text: "#020617" },
+  "Prototype":  { bg: "#8B5CF6", text: "#fff" },
+  "Demo":       { bg: "#F8FAFC", text: "#020617" },
+  "Concept":    { bg: "#1E293B", text: "#94A3B8" },
+  "Live":       { bg: "#10B981", text: "#020617" },
 };
 
 function MockUI({ accent, pattern }: { accent: string; pattern: "grid" | "list" | "dashboard" }) {
@@ -140,7 +140,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.22, ease: "easeOut" }}
-      className="group flex flex-col h-full card-depth-1 transition-colors duration-200"
+      className="group flex flex-col h-full card-depth-1 transition-colors duration-200 rounded-xl overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]"
     >
       {/* Thumbnail */}
       <div className="overflow-hidden relative">
@@ -156,7 +156,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         />
       </div>
 
-      <div className="flex flex-col flex-1 p-5 gap-4" style={{ borderTop: "1px solid #2a2a2a" }}>
+      <div className="flex flex-col flex-1 p-5 gap-4" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div>
           <div className="text-[0.65rem] font-black uppercase tracking-widest text-muted mb-1.5">
             {project.category} · {project.year}
@@ -171,7 +171,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             <span
               key={tech}
               className="text-xs font-medium text-muted px-2 py-0.5"
-              style={{ border: "1px solid #333", background: "transparent" }}
+              style={{ border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.02)" }}
             >
               {tech}
             </span>
@@ -197,7 +197,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5 text-[12px] font-semibold text-muted hover:text-main transition-colors"
-              style={{ borderTop: "1px solid #2a2a2a" }}
+              style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
             >
               <ExternalLink className="h-3.5 w-3.5" />
               Live Demo

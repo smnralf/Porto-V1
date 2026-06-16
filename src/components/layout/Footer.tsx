@@ -3,7 +3,9 @@ import { MessageCircle, GitBranch, MapPin, Clock } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-base" style={{ borderTop: "1px solid #FF4D00" }}>
+    <footer className="bg-[#020617] border-t border-white/5 relative overflow-hidden">
+      {/* Subtle bottom glow */}
+      <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] rounded-full bg-[#06B6D4] opacity-[0.05] filter blur-[80px] pointer-events-none" />
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8 pt-20 pb-12">
 
         {/* Top row */}
@@ -17,10 +19,10 @@ export default function Footer() {
             <p className="text-sm leading-relaxed max-w-xs italic" style={{ color: "#666" }}>
               Mahasiswa Informatika. Fokus pada antarmuka bersih, sistem fungsional, dan komunikasi yang jelas dengan klien.
             </p>
-            {/* Status badge — more prominent */}
-            <div className="flex items-center gap-2 w-fit">
-              <span className="inline-flex items-center gap-1.5 border-2 border-ink bg-lime px-3 py-1.5 text-[0.7rem] font-black uppercase tracking-widest text-ink">
-                <span className="h-1.5 w-1.5 rounded-full bg-ink animate-pulse" />
+            {/* Status badge */}
+            <div className="flex items-center gap-2 w-fit mt-2">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[0.7rem] font-semibold tracking-wide text-white/80">
+                <span className="h-1.5 w-1.5 rounded-full bg-ember animate-pulse" />
                 Open for projects
               </span>
             </div>
@@ -86,7 +88,7 @@ export default function Footer() {
               href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-2 border-2 border-ink bg-ember px-4 py-2 text-[12px] font-black text-ink btn-hard w-fit"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-2.5 text-[13px] font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,255,255,0.1)] w-fit"
             >
               <MessageCircle className="h-3.5 w-3.5" />
               Mari Berdiskusi

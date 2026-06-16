@@ -6,9 +6,9 @@ import { ArrowRight } from "lucide-react";
 import { getFeaturedProjects } from "@/data/projects";
 
 const COLORS: Record<string, string> = {
-  "Web App":         "#FF4D00",
-  "Company Profile": "#7C3AED",
-  Dashboard:         "#B6FF4D",
+  "Web App":         "#06B6D4",
+  "Company Profile": "#8B5CF6",
+  Dashboard:         "#10B981",
 };
 
 export default function ProjectTeaser() {
@@ -29,8 +29,8 @@ export default function ProjectTeaser() {
 
         <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-0.5 sm:grid sm:grid-cols-3 sm:overflow-visible">
           {projects.map((project, i) => {
-            const color = COLORS[project.category] ?? "#F5F2EA";
-            const isLight = color === "#B6FF4D" || color === "#F4F1E8";
+            const color = COLORS[project.category] ?? "#F8FAFC";
+            const isLight = color === "#10B981" || color === "#F8FAFC";
             return (
               <motion.div
                 key={project.slug}
@@ -69,8 +69,8 @@ export default function ProjectTeaser() {
                     )}
                     <div className="absolute top-1.5 right-1.5 shadow-md">
                       <span
-                        className="text-[9px] font-black px-1.5 py-0.5 uppercase tracking-wide shadow-hard-sm"
-                        style={{ background: color, color: isLight ? "#111" : "#fff" }}
+                        className="text-[9px] font-black px-2 py-0.5 uppercase tracking-wide rounded-full shadow-[0_0_10px_rgba(0,0,0,0.5)]"
+                        style={{ background: color, color: isLight ? "#020617" : "#fff" }}
                       >
                         {project.status}
                       </span>

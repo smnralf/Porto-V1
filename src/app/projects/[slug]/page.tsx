@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, GitBranch, ExternalLink } from "lucide-react";
+import { ArrowLeft, GitBranch, ExternalLink, Code2, Rocket } from "lucide-react";
 import { getProjectBySlug, projects } from "@/data/projects";
 import Badge from "@/components/ui/Badge";
 
@@ -22,122 +22,156 @@ export default async function ProjectDetailPage(props: PageProps<"/projects/[slu
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
-  const card = "border border-white/8 bg-surface p-6";
+  const firstImage = project.screenshots?.[0] || null;
+  const otherImages = project.screenshots?.slice(1) || [];
 
   return (
-    <div className="min-h-screen bg-base pt-[58px]">
-      <div className="border-b border-white/8 bg-surface px-5 sm:px-6 lg:px-8 py-10">
-        <div className="mx-auto max-w-4xl">
+    <div className="min-h-screen bg-[#020617] pt-[58px]">
+      
+      {/* 1. Full-bleed Hero Section */}
+      <div className="relative w-full h-[60vh] min-h-[400px] flex flex-col justify-end">
+        {/* Background Image with Gradient Overlay */}
+        {firstImage ? (
+          <div className="absolute inset-0 z-0">
+            <Image 
+              src={firstImage} 
+              alt={project.title} 
+              fill 
+              className="object-cover object-top opacity-40" 
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/80 to-transparent" />
+          </div>
+        ) : (
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#06B6D4]/10 to-[#8B5CF6]/10">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent" />
+          </div>
+        )}
+
+        {/* Hero Content */}
+        <div className="relative z-10 w-full px-5 sm:px-6 lg:px-8 pb-12 mx-auto max-w-7xl">
           <Link href="/projects"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-muted hover:text-ember transition-colors mb-6">
+            className="inline-flex items-center gap-2 text-sm font-semibold text-white/60 hover:text-white transition-colors mb-8 backdrop-blur-md bg-white/5 px-4 py-2 rounded-full border border-white/10 w-fit">
             <ArrowLeft className="h-4 w-4" /> Kembali ke Projects
           </Link>
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <Badge status={project.status}>{project.status}</Badge>
-            <span className="text-[11px] font-bold text-muted border border-white/12 px-2 py-0.5">{project.year}</span>
-            <span className="text-[11px] font-bold text-muted border border-white/12 px-2 py-0.5">{project.category}</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-black text-main tracking-tight leading-tight mb-3">{project.title}</h1>
-          <p className="text-[15px] text-muted leading-relaxed max-w-2xl">{project.shortDescription}</p>
 
-          {(project.liveUrl || project.githubUrl) && (
-            <div className="flex gap-3 mt-6">
-              {project.liveUrl && (
-                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border-2 border-ink bg-ember px-4 py-2 text-sm font-black text-ink btn-hard">
-                  <ExternalLink className="h-4 w-4" /> Live Demo
-                </a>
-              )}
-              {project.githubUrl && (
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-white/15 bg-surface-alt px-4 py-2 text-sm font-semibold text-main hover:border-white/25 transition-colors">
-                  <GitBranch className="h-4 w-4" /> GitHub
-                </a>
-              )}
-            </div>
-          )}
+          <div className="flex flex-wrap items-center gap-3 mb-5">
+            <Badge status={project.status}>{project.status}</Badge>
+            <span className="text-[12px] font-bold text-[#06B6D4] border border-[#06B6D4]/30 bg-[#06B6D4]/10 px-3 py-1 rounded-full">{project.year}</span>
+            <span className="text-[12px] font-bold text-[#8B5CF6] border border-[#8B5CF6]/30 bg-[#8B5CF6]/10 px-3 py-1 rounded-full">{project.category}</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-[1.1] mb-6 max-w-4xl drop-shadow-2xl">
+            {project.title}
+          </h1>
+          <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-3xl font-medium">
+            {project.shortDescription}
+          </p>
         </div>
       </div>
 
-      <div className="px-5 sm:px-6 lg:px-8 py-10">
-        <div className="mx-auto max-w-4xl">
-          {/* Screenshots */}
-          {project.screenshots && project.screenshots.length > 0 ? (
-            <div className="mb-8 flex flex-col gap-4">
-              {project.screenshots.map((src, i) => (
-                <div key={i} className="border border-white/8 overflow-hidden">
-                  <Image
-                    src={src}
-                    alt={`${project.title} screenshot ${i + 1}`}
-                    width={0}
-                    height={0}
-                    sizes="(max-width: 768px) 100vw, 896px"
-                    className="w-full h-auto"
-                  />
+      {/* 2. Main Content (Sticky Sidebar Layout) */}
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-16">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+          
+          {/* Left Column: Sticky Sidebar Info */}
+          <aside className="lg:w-1/3">
+            <div className="sticky top-[100px] flex flex-col gap-8">
+              
+              {/* Action Buttons */}
+              {(project.liveUrl || project.githubUrl) && (
+                <div className="flex flex-col gap-3">
+                  {project.liveUrl && (
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-[#06B6D4] px-6 py-4 text-sm font-bold text-[#020617] transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                      <Rocket className="h-5 w-5" /> Visit Live Site
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-surface/50 px-6 py-4 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/10 hover:border-white/20">
+                      <GitBranch className="h-5 w-5" /> View Source Code
+                    </a>
+                  )}
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div className="border border-white/8 h-56 sm:h-72 mb-8 flex items-center justify-center relative overflow-hidden bg-surface">
-              <div className="absolute inset-0 opacity-[0.03]"
-                style={{ backgroundImage: "linear-gradient(rgba(245,242,234,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(245,242,234,0.5) 1px,transparent 1px)", backgroundSize: "32px 32px" }} />
-              <span className="text-[80px] font-black text-white/5 select-none relative z-10">{project.title.charAt(0)}</span>
-            </div>
-          )}
+              )}
 
-          <div className="grid grid-cols-1 gap-4">
-            <section className={card}>
-              <h2 className="text-base font-black text-main mb-3 border-b border-white/8 pb-2">Overview</h2>
-              <p className="text-[14px] text-muted leading-relaxed">{project.longDescription}</p>
-            </section>
+              {/* Tech Stack */}
+              <div className="rounded-3xl border border-white/10 bg-surface/30 backdrop-blur-md p-6 sm:p-8">
+                <h3 className="text-sm font-bold text-white/50 uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <Code2 className="h-4 w-4" /> Technologies
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech) => (
+                    <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[13px] font-medium text-white hover:bg-white/10 transition-colors">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <section className={card}>
-                <h2 className="text-base font-black text-main mb-3 border-b border-white/8 pb-2">Problem</h2>
-                <p className="text-[13px] text-muted leading-relaxed">{project.problem}</p>
-              </section>
-              <section className={card}>
-                <h2 className="text-base font-black text-main mb-3 border-b border-white/8 pb-2">Solution</h2>
-                <p className="text-[13px] text-muted leading-relaxed">{project.solution}</p>
-              </section>
+            </div>
+          </aside>
+
+          {/* Right Column: Editorial Content */}
+          <article className="lg:w-2/3 prose prose-invert prose-lg max-w-none">
+            <div className="mb-16">
+              <h2 className="text-3xl font-black text-white mb-6">Overview</h2>
+              <p className="text-white/70 leading-relaxed text-lg">{project.longDescription}</p>
             </div>
 
-            <section className={card}>
-              <h2 className="text-base font-black text-main mb-4 border-b border-white/8 pb-2">Fitur Utama</h2>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              <div className="rounded-3xl border border-[#FF4D4D]/20 bg-[#FF4D4D]/5 p-8 backdrop-blur-md">
+                <h3 className="text-xl font-bold text-[#FF4D4D] mb-4">The Challenge</h3>
+                <p className="text-white/70 text-base leading-relaxed">{project.problem}</p>
+              </div>
+              <div className="rounded-3xl border border-[#10B981]/20 bg-[#10B981]/5 p-8 backdrop-blur-md">
+                <h3 className="text-xl font-bold text-[#10B981] mb-4">The Solution</h3>
+                <p className="text-white/70 text-base leading-relaxed">{project.solution}</p>
+              </div>
+            </div>
+
+            <div className="mb-16">
+              <h2 className="text-3xl font-black text-white mb-8">Key Features</h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 list-none pl-0">
                 {project.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-[13px] text-muted">
-                    <span className="mt-1.5 h-2 w-2 bg-ember flex-shrink-0" />{feature}
+                  <li key={feature} className="flex items-start gap-3 text-white/80 bg-surface/30 p-4 rounded-2xl border border-white/5">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-[#06B6D4] flex-shrink-0 shadow-[0_0_10px_rgba(6,182,212,0.8)]" />
+                    <span className="text-base">{feature}</span>
                   </li>
                 ))}
               </ul>
-            </section>
+            </div>
 
-            <section className={card}>
-              <h2 className="text-base font-black text-main mb-4 border-b border-white/8 pb-2">Tech Stack</h2>
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech) => (
-                  <span key={tech} className="border border-white/12 bg-surface-alt px-3 py-1.5 text-[12px] font-bold text-muted">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </section>
-
-            <section className={card}>
-              <h2 className="text-base font-black text-main mb-3 border-b border-white/8 pb-2">Hasil</h2>
-              <p className="text-[14px] text-muted leading-relaxed">
+            <div className="mb-16">
+              <h2 className="text-3xl font-black text-white mb-6">Result & Impact</h2>
+              <p className="text-white/70 leading-relaxed text-lg p-6 border-l-4 border-[#8B5CF6] bg-[#8B5CF6]/5 rounded-r-2xl">
                 {project.result}
               </p>
-            </section>
-          </div>
+            </div>
 
-          <div className="mt-8">
-            <Link href="/projects"
-              className="inline-flex items-center gap-2 border border-white/15 bg-surface px-6 py-3 text-sm font-semibold text-main hover:border-white/25 transition-colors">
-              <ArrowLeft className="h-4 w-4" /> Kembali ke Semua Project
-            </Link>
-          </div>
+            {/* Additional Screenshots Showcase */}
+            {otherImages.length > 0 && (
+              <div className="mb-16">
+                <h2 className="text-3xl font-black text-white mb-8">Gallery</h2>
+                <div className="flex flex-col gap-8">
+                  {otherImages.map((src, i) => (
+                    <div key={i} className="rounded-3xl border border-white/10 overflow-hidden shadow-2xl relative group">
+                      <Image
+                        src={src}
+                        alt={`${project.title} screenshot ${i + 2}`}
+                        width={1200}
+                        height={800}
+                        sizes="(max-width: 768px) 100vw, 800px"
+                        className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-[#06B6D4]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </article>
         </div>
       </div>
     </div>

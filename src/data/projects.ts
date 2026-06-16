@@ -27,9 +27,9 @@ export const projects: Project[] = [
     longDescription:
       "Dashboard analitik yang membantu trader memahami faktor-faktor fundamental yang mempengaruhi pergerakan harga XAUUSD (Gold/USD). Dashboard ini menampilkan data makroekonomi dari FRED, harga live dari Yahoo Finance, dan prediksi arah harga menggunakan machine learning dalam satu tampilan terintegrasi.",
     problem:
-      "Trader XAUUSD seringkali harus membuka banyak sumber data terpisah — berita ekonomi, kalender ekonomi, indikator teknikal — yang membuang waktu dan menyulitkan proses pengambilan keputusan.",
+      "Trader XAUUSD biasanya pusing karena harus buka banyak tab — berita, kalender ekonomi, chart — bikin ribet dan telat ngambil keputusan.",
     solution:
-      "Membangun dashboard analitik dengan Next.js dan FastAPI yang mengintegrasikan data makroekonomi (CPI, Fed Rate, Real Rate, dll), harga live emas & DXY, dan model Random Forest untuk prediksi arah pergerakan harga dalam satu tampilan terpadu.",
+      "Saya bikin dashboard pakai Next.js & FastAPI buat nyatuin semua data makroekonomi, harga live emas, plus prediksi arah harga pakai Random Forest dalam satu layar.",
     result:
       "Menghasilkan sebuah konsep dashboard interaktif yang berpotensi memangkas waktu riset trader secara drastis dengan menyajikan data fundamental dan prediktif dalam satu layar ringkas.",
     techStack: ["Next.js 16", "TypeScript", "FastAPI", "Python", "scikit-learn", "Recharts", "pandas", "yfinance"],
@@ -58,9 +58,9 @@ export const projects: Project[] = [
     longDescription:
       "HRIS adalah aplikasi web berbasis Laravel yang dirancang untuk membantu perusahaan dalam mengelola data karyawan, pencatatan absensi, dan proses penggajian secara terpusat dan efisien.",
     problem:
-      "Pengelolaan data karyawan, absensi, dan penggajian yang masih dilakukan secara manual menyebabkan inefisiensi operasional, risiko kesalahan data, dan sulitnya akses informasi secara real-time.",
+      "Banyak perusahaan masih pakai sistem absen dan hitung gaji manual pakai Excel. Rawan error dan bikin HRD pusing tiap akhir bulan.",
     solution:
-      "Membangun sistem HRIS berbasis web dengan Laravel yang mengotomasi seluruh proses HR — dari pencatatan absensi harian hingga kalkulasi gaji — dalam satu platform terpusat yang bisa diakses oleh admin dan karyawan.",
+      "Saya bangun sistem HRIS full-stack pakai Laravel buat otomasi semuanya — dari absen harian sampai slip gaji otomatis, beres dalam satu platform.",
     result:
       "Proses manajemen data karyawan menjadi terotomatisasi, mengurangi human-error dalam perhitungan absensi dan penggajian, serta memudahkan akses informasi secara transparan bagi seluruh karyawan.",
     techStack: ["PHP", "Laravel", "Tailwind CSS", "JavaScript", "AJAX", "MySQL"],
@@ -90,9 +90,9 @@ export const projects: Project[] = [
     longDescription:
       "Sehatin adalah aplikasi web yang membantu pengguna mengingat jadwal minum obat secara teratur. Dirancang dengan antarmuka yang sederhana dan mudah digunakan oleh semua kalangan, termasuk lansia.",
     problem:
-      "Banyak pengguna, terutama lansia, kesulitan mengingat jadwal dan dosis obat secara konsisten. Kelalaian ini berdampak langsung pada efektivitas pengobatan dan kesehatan jangka panjang.",
+      "Orang tua atau lansia sering banget lupa minum obat. Sekalinya lupa, efek pengobatannya jadi berantakan.",
     solution:
-      "Membangun aplikasi web berbasis browser yang ringan dan mudah diakses tanpa instalasi. Pengguna cukup membuka browser, mengatur jadwal obat, dan mendapatkan pengingat secara otomatis.",
+      "Bikin web app super simpel yang bisa diakses langsung dari browser HP tanpa install apa-apa, khusus buat ngingetin jadwal obat otomatis.",
     result:
       "Menghasilkan aplikasi pengingat yang sangat ramah pengguna dengan notifikasi tepat waktu, membantu pengguna (khususnya lansia) untuk terus mematuhi jadwal minum obat mereka.",
     techStack: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
@@ -117,9 +117,9 @@ export const projects: Project[] = [
     longDescription:
       "Demo website company profile modern yang dibangun dengan Next.js dan Tailwind CSS. Cocok sebagai referensi desain untuk bisnis atau UMKM yang ingin tampil profesional di dunia digital.",
     problem:
-      "Banyak UMKM dan bisnis lokal belum memiliki website yang representatif, sehingga kehilangan kepercayaan calon pelanggan yang pertama kali mencari informasi bisnis secara online.",
+      "Masih banyak UMKM lokal yang belum punya website gara-gara mikir bikin web itu mahal dan ribet, akhirnya kalah saing di Google.",
     solution:
-      "Membuat demo company profile modern berbasis Next.js dengan desain responsif, performa tinggi, dan struktur yang mudah dikustomisasi sesuai identitas bisnis klien.",
+      "Saya rakit template modern pakai Next.js biar performanya ngebut. UMKM tinggal pakai, ganti teks & foto, langsung kelihatan profesional.",
     result:
       "Terciptanya sebuah template dasar berkualitas tinggi yang mempercepat proses pembuatan website profesional untuk UMKM, dilengkapi dengan desain responsif dan skor performa yang optimal.",
     techStack: ["Next.js", "Tailwind CSS"],
@@ -144,9 +144,9 @@ export const projects: Project[] = [
     longDescription:
       "NextPos adalah aplikasi POS (Point of Sale) dan manajemen stok berbasis web yang dibangun dengan Laravel 12. Terdapat dua role pengguna — admin untuk mengelola barang, stok, dan laporan, serta kasir untuk memproses transaksi penjualan. Dilengkapi autentikasi via Laravel Breeze dan antarmuka responsif dengan Tailwind CSS.",
     problem:
-      "Banyak bisnis kecil dan menengah menggunakan sistem kasir manual atau software lama yang lambat, tidak terintegrasi dengan stok, dan tidak menghasilkan laporan penjualan yang akurat.",
+      "Kasir manual atau aplikasi POS jadul sering lemot, susah sinkron sama sisa stok gudang, dan laporan penjualannya nggak real-time.",
     solution:
-      "Membangun aplikasi POS berbasis web dengan Laravel 12 yang mengintegrasikan kasir, manajemen stok, dan laporan penjualan dalam satu platform — dengan antarmuka responsif menggunakan Tailwind CSS dan Alpine.js.",
+      "Saya garap aplikasi kasir (POS) pakai Laravel 12 + Tailwind yang ringan. Ada fitur kasir buat jaga toko, dan dashboard buat bos mantau untung rugi.",
     result:
       "Aplikasi berhasil mengintegrasikan modul kasir dan stok, memberikan kemudahan bagi pemilik bisnis untuk memantau penjualan harian serta sisa barang secara real-time dari mana saja.",
     techStack: ["Laravel 12", "PHP 8.2", "Tailwind CSS", "Alpine.js", "MySQL", "Blade", "Vite"],
