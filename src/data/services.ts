@@ -30,7 +30,7 @@ export const services: Service[] = [
       "For simple promotional pages, products, events, campaigns, or personal links.",
     longDescription:
       "A landing page is a fast and effective solution to promote your products, events, or business campaigns. With an attractive design and clear CTAs, landing pages help convert visitors into customers.",
-    price: "Starting from Rp500.000",
+    price: "From Rp500.000",
     estimatedTimeline: "3–5 working days",
     includes: [
       "1 landing page",
@@ -73,7 +73,7 @@ export const services: Service[] = [
       "For company profiles, business portfolios, and informational websites with 3–5 pages.",
     longDescription:
       "A professional company profile website to build your business's online credibility. Display your profile, services, and business contacts in one elegant and informative website.",
-    price: "Starting from Rp3.500.000",
+    price: "From Rp3.500.000",
     estimatedTimeline: "7–14 working days",
     includes: [
       "3–5 pages",
@@ -118,7 +118,7 @@ export const services: Service[] = [
       "For websites with logins, dashboards, databases, and data management.",
     longDescription:
       "A complete dynamic website with a content management system, admin panel, and database. Ideal for businesses that need to manage their data independently without constantly relying on a developer.",
-    price: "Starting from Rp6.500.000",
+    price: "From Rp6.500.000",
     estimatedTimeline: "14–30 working days",
     includes: [
       "Admin login",

@@ -69,7 +69,7 @@ export default function ServiceCard({ service }: { service: Service }) {
       <div className="flex flex-col flex-1 p-5 gap-4">
         {/* Title + description */}
         <div>
-          <h3 className="font-black text-main text-[15px] mb-1.5">{service.title}</h3>
+          <h3 className={`font-black text-main text-[15px] mb-1.5 ${service.highlighted ? 'pr-16' : ''}`}>{service.title}</h3>
           <p className="text-[12px] text-muted leading-relaxed">{service.shortDescription}</p>
         </div>
 

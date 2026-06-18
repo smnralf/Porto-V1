@@ -33,7 +33,7 @@ export default function ServicesSection() {
         </motion.div>
 
         {/* Modern Pricing Table Layout */}
-        <div className="flex flex-col lg:flex-row items-stretch justify-center gap-6 lg:gap-0 lg:items-center">
+        <div className="flex flex-col lg:flex-row items-stretch justify-center gap-6 lg:items-center">
           {services.map((service, i) => {
             const isPopular = service.highlighted;
             
@@ -44,9 +44,9 @@ export default function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`w-full lg:w-1/4 ${
+                className={`relative w-full lg:w-1/4 ${
                   isPopular 
-                    ? "z-10 lg:scale-110 lg:-mx-4 shadow-[0_0_40px_rgba(6,182,212,0.15)]" 
+                    ? "z-10 lg:scale-105 shadow-[0_0_40px_rgba(6,182,212,0.15)]" 
                     : "z-0 scale-100"
                 }`}
               >
