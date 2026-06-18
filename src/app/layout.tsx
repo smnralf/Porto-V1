@@ -23,24 +23,24 @@ export const metadata: Metadata = {
     template: "%s | smnralf",
   },
   description:
-    "Portfolio smnralf — mahasiswa Informatika dan web developer yang fokus membangun antarmuka bersih, responsif, dan fungsional. Dari frontend sampai backend.",
+    "smnralf Portfolio — Software Engineer and AI Enthusiast focused on building scalable, intelligent, and functional systems.",
   keywords: [
-    "web developer",
+    "software engineer",
     "portfolio",
     "smnralf",
-    "Next.js",
-    "React",
-    "frontend developer",
-    "fullstack developer Indonesia",
+    "AI enthusiast",
+    "machine learning",
+    "fullstack developer",
+    "python",
   ],
   authors: [{ name: "smnralf" }],
   openGraph: {
     type: "website",
-    locale: "id_ID",
+    locale: "en_US",
     siteName: "smnralf",
-    title: "smnralf — Web Developer",
+    title: "smnralf — Software Engineer & AI Enthusiast",
     description:
-      "Mahasiswa Informatika. Membangun antarmuka bersih, sistem fungsional, dan website yang bisa dipakai secara nyata.",
+      "Computer Science Student. Building intelligent, scalable solutions and AI-integrated applications.",
   },
 };
 
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
       <body suppressHydrationWarning className="min-h-screen flex flex-col">
         <LoadingScreen />
         <CustomCursor />

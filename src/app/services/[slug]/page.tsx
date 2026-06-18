@@ -28,7 +28,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
         <div className="mx-auto max-w-4xl">
           <Link href="/services"
             className="inline-flex items-center gap-2 text-sm font-semibold text-muted hover:text-ember transition-colors mb-6">
-            <ArrowLeft className="h-4 w-4" /> Kembali ke Layanan
+            <ArrowLeft className="h-4 w-4" /> Back to Services
           </Link>
           <h1 className="text-4xl sm:text-5xl font-black text-main tracking-tight leading-tight mb-3">{service.title}</h1>
           <p className="text-[15px] text-muted leading-relaxed mb-4 max-w-2xl">{service.longDescription}</p>
@@ -46,7 +46,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             <div className="lg:col-span-2 flex flex-col gap-5">
               <section className={card}>
-                <h2 className="font-black text-main mb-4 border-b border-white/8 pb-2">Untuk Siapa?</h2>
+                <h2 className="font-black text-main mb-4 border-b border-white/8 pb-2">Target Audience</h2>
                 <ul className="flex flex-col gap-2">
                   {service.forWho.map((item) => (
                     <li key={item} className="flex items-start gap-2 text-[13px] text-muted">
@@ -57,7 +57,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
               </section>
 
               <section className={card}>
-                <h2 className="font-black text-main mb-4 border-b border-white/8 pb-2">Yang Sudah Termasuk</h2>
+                <h2 className="font-black text-main mb-4 border-b border-white/8 pb-2">What's Included</h2>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {service.includes.map((item) => (
                     <li key={item} className="flex items-start gap-2 text-[13px] text-muted">
@@ -68,7 +68,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
               </section>
 
               <section className={card}>
-                <h2 className="font-black text-main mb-4 border-b border-white/8 pb-2">FAQ Layanan Ini</h2>
+                <h2 className="font-black text-main mb-4 border-b border-white/8 pb-2">Service FAQ</h2>
                 <div className="flex flex-col gap-4">
                   {service.faqs.map((faq, i) => (
                     <div key={i} className="border-b border-white/5 last:border-0 pb-4 last:pb-0">
@@ -93,13 +93,13 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 border-2 border-ink bg-ember px-4 py-3 text-[13px] font-black text-ink btn-hard w-full"
                 >
-                  <MessageCircle className="h-4 w-4" /> Mari Berdiskusi
+                  <MessageCircle className="h-4 w-4" /> Let's Discuss
                 </a>
 
-                <p className="text-[11px] text-muted text-center">Mari berdiskusi · Tanpa komitmen</p>
+                <p className="text-[11px] text-muted text-center">Let's discuss · No commitment</p>
 
                 <div className="border-t border-white/8 pt-4">
-                  <p className="text-[10px] font-black uppercase tracking-wider text-muted mb-2">Termasuk:</p>
+                  <p className="text-[10px] font-black uppercase tracking-wider text-muted mb-2">Includes:</p>
                   <ul className="flex flex-col gap-1.5">
                     {service.includes.slice(0, 4).map((item) => (
                       <li key={item} className="flex items-start gap-2 text-[12px] text-muted">
@@ -107,7 +107,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
                       </li>
                     ))}
                     {service.includes.length > 4 && (
-                      <li className="text-[11px] text-muted pl-5">+{service.includes.length - 4} lainnya</li>
+                      <li className="text-[11px] text-muted pl-5">+{service.includes.length - 4} more</li>
                     )}
                   </ul>
                 </div>
@@ -118,7 +118,7 @@ export default async function ServiceDetailPage(props: PageProps<"/services/[slu
           <div className="mt-8">
             <Link href="/services"
               className="inline-flex items-center gap-2 border border-white/15 bg-surface px-6 py-3 text-sm font-semibold text-main hover:border-white/25 transition-colors">
-              <ArrowLeft className="h-4 w-4" /> Lihat Semua Layanan
+              <ArrowLeft className="h-4 w-4" /> View All Services
             </Link>
           </div>
         </div>

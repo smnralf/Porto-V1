@@ -17,7 +17,7 @@ export default function Footer() {
               smnralf<span className="text-ember">_</span>
             </Link>
             <p className="text-sm leading-relaxed max-w-xs italic" style={{ color: "#666" }}>
-              Mahasiswa Informatika. Fokus pada antarmuka bersih, sistem fungsional, dan komunikasi yang jelas dengan klien.
+              Informatics student. Focused on clean interfaces, functional systems, and clear communication with clients.
             </p>
             {/* Status badge */}
             <div className="flex items-center gap-2 w-fit mt-2">
@@ -34,19 +34,19 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-[12px] text-muted">
                 <Clock className="h-3.5 w-3.5 flex-shrink-0" />
-                Respon WhatsApp biasanya dalam 1–3 jam
+                WhatsApp replies typically within 1–3 hours
               </div>
             </div>
           </div>
 
           {/* Pages */}
           <div className="flex flex-col gap-3">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">Halaman</h3>
+            <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">Pages</h3>
             <nav className="flex flex-col gap-2">
               {[
-                { href: "/",         label: "Beranda" },
-                { href: "/projects", label: "Project" },
-                { href: "/services", label: "Layanan" },
+                { href: "/",         label: "Home" },
+                { href: "/projects", label: "Projects" },
+                { href: "/services", label: "Services" },
               ].map((link) => (
                 <Link
                   key={link.href}
@@ -61,10 +61,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="flex flex-col gap-3">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">Kontak</h3>
+            <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted">Contact</h3>
             <div className="flex flex-col gap-2.5">
               <a
-                href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
+                href={`https://wa.me/6285176828884?text=${encodeURIComponent("Hello, I'd like to discuss a project.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted hover:text-ember transition-colors w-fit"
@@ -85,13 +85,13 @@ export default function Footer() {
 
             {/* Quick CTA */}
             <a
-              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
+              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Hello, I'd like to discuss a project.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-2.5 text-[13px] font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,255,255,0.1)] w-fit"
             >
               <MessageCircle className="h-3.5 w-3.5" />
-              Mari Berdiskusi
+              Let's Talk
             </a>
           </div>
         </div>

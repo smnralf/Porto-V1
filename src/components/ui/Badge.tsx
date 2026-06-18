@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 const STATUS: Record<string, { bg: string; text: string; border: string }> = {
-  "Case Study": { bg: "#FF4D00", text: "#111",    border: "#111" },
+  "Case Study": { bg: "#06B6D4", text: "#111",    border: "#111" },
   Prototype:    { bg: "#7C3AED", text: "#fff",    border: "#111" },
   Demo:         { bg: "#F4F1E8", text: "#111",    border: "#111" },
   Concept:      { bg: "#222226", text: "#B8B2A7", border: "rgba(245,242,234,0.15)" },

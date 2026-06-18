@@ -35,11 +35,10 @@ export default function FreelanceCTA() {
                 Freelance
               </span>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight drop-shadow-md">
-                Sedang butuh website?
+                Need a website?
               </h2>
               <p className="text-base sm:text-lg text-white/90 leading-relaxed font-medium">
-                Saya menerima pengerjaan landing page, company profile, dan admin
-                panel untuk kebutuhan personal, UMKM, maupun bisnis.
+                I accept projects for landing pages, company profiles, and admin panels for personal, small business, and corporate needs.
               </p>
             </div>
 
@@ -47,7 +46,7 @@ export default function FreelanceCTA() {
               href="/services"
               className="flex-shrink-0 group relative inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-base font-bold text-[#020617] transition-all hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(0,0,0,0.2)]"
             >
-              Lihat Layanan 
+              View Services 
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>

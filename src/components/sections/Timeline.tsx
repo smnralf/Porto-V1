@@ -6,37 +6,37 @@ import RevealClip from "@/components/ui/RevealClip";
 const EVENTS = [
   {
     year: "2022",
-    title: "Mulai Belajar Informatika",
-    desc: "Dasar pemrograman, logika, dan algoritma.",
-    detail: "Pertama kali menulis kode Python dan C — loop, kondisi, fungsi. Mulai memahami bagaimana komputer berpikir.",
+    title: "Started Learning Computer Science",
+    desc: "Programming basics, logic, and algorithms.",
+    detail: "Wrote my first Python and C code — loops, conditions, functions. Started understanding how computers think.",
     color: "#06B6D4",
   },
   {
     year: "2023",
-    title: "PHP, MySQL & Web Pertama",
-    desc: "Membangun aplikasi web pertama dengan PHP native, JSP, dan MySQL.",
-    detail: "Bikin Sehatin (pengingat minum obat) dan CRUD App berbasis Java JSP — database pertama, form POST pertama, SQL pertama.",
+    title: "PHP, MySQL & First Web App",
+    desc: "Built my first web apps using native PHP, JSP, and MySQL.",
+    detail: "Created 'Sehatin' (medicine reminder) and a Java JSP CRUD App — my first database, first POST form, and first SQL queries.",
     color: "#8B5CF6",
   },
   {
     year: "2024",
-    title: "Eksplorasi Backend & Golang",
-    desc: "Mulai mendalami bahasa Go untuk membangun backend yang cepat dan skalabel.",
-    detail: "Memahami ekosistem Go, goroutine, dan arsitektur yang lebih efisien untuk menangani proses di sisi server.",
+    title: "Exploring Backend & Golang",
+    desc: "Began deep-diving into Go to build fast and scalable backends.",
+    detail: "Understood the Go ecosystem, goroutines, and efficient architectures for handling server-side processes.",
     color: "#06B6D4",
   },
   {
     year: "2025",
-    title: "Membangun Portfolio",
-    desc: "Mengumpulkan case study, prototype, serta konsep aplikasi digital.",
-    detail: "Menata kembali project-project sebelumnya dan mendokumentasikan proses kerja dalam satu website portfolio profesional yang modern.",
+    title: "Building Portfolio",
+    desc: "Gathering case studies, prototypes, and digital app concepts.",
+    detail: "Reorganized past projects and documented the working process in a single, modern professional portfolio website.",
     color: "#8B5CF6",
   },
   {
     year: "2026",
-    title: "Open for Project",
-    desc: "Mulai menerima proyek profesional dan kolaborasi pengembangan web.",
-    detail: "Siap mengerjakan aplikasi web end-to-end. Fokus pada solusi teknis, komunikasi klien yang baik, dan pengiriman produk berkualitas.",
+    title: "Open for Projects",
+    desc: "Started accepting professional projects and web development collaborations.",
+    detail: "Ready to work on end-to-end web applications. Focusing on technical solutions, great client communication, and delivering quality products.",
     color: "#10B981",
   },
 ];
@@ -54,12 +54,12 @@ export default function Timeline() {
         >
           <RevealClip inline>
             <span className="inline-block rounded-full border border-velvet/30 bg-velvet/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-velvet mb-4">
-              Perjalanan
+              Journey
             </span>
           </RevealClip>
           <RevealClip delay={0.08}>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-main mt-4">
-              Bagaimana saya sampai di sini.
+              How I got here.
             </h2>
           </RevealClip>
         </motion.div>

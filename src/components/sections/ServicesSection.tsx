@@ -7,7 +7,7 @@ import ServiceCard from "@/components/cards/ServiceCard";
 
 export default function ServicesSection() {
   return (
-    <section id="layanan" className="px-5 sm:px-6 lg:px-8 py-24 bg-[#020617] section-rule relative overflow-hidden">
+    <section id="services" className="px-5 sm:px-6 lg:px-8 py-24 bg-[#020617] section-rule relative overflow-hidden">
       {/* Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-64 bg-[#06B6D4] opacity-[0.05] blur-[100px] pointer-events-none" />
 
@@ -21,14 +21,14 @@ export default function ServicesSection() {
         >
           <RevealClip inline>
             <span className="inline-block rounded-full border border-[#06B6D4]/30 bg-[#06B6D4]/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-[#06B6D4] mb-4">
-              Layanan &amp; Harga
+              Services &amp; Pricing
             </span>
           </RevealClip>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4">
-            Pilih paket yang sesuai.
+            Choose the right package.
           </h2>
           <p className="text-base text-white/60 max-w-xl">
-            Harga transparan. Tidak ada biaya tersembunyi. Dari landing page sederhana hingga web app kustom penuh.
+            Transparent pricing. No hidden fees. From simple landing pages to full custom web apps.
           </p>
         </motion.div>
 
@@ -63,7 +63,7 @@ export default function ServicesSection() {
           transition={{ duration: 0.4, delay: 0.4 }}
           className="text-sm text-white/50 mt-12 text-center max-w-2xl mx-auto"
         >
-          * Harga dapat berubah tergantung jumlah halaman, fitur tambahan, kerumitan integrasi, dan kebutuhan hosting/domain khusus.
+          * Pricing may vary depending on the number of pages, additional features, integration complexity, and custom hosting/domain requirements.
         </motion.p>
       </div>
     </section>

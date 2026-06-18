@@ -45,7 +45,7 @@ body::before {
   mix-blend-mode: overlay;
 }
 
-::selection { background-color: #FF4D00; color: #fff; }
+::selection { background-color: #06B6D4; color: #fff; }
 
 ::-webkit-scrollbar        { width: 5px; }
 ::-webkit-scrollbar-track  { background: var(--color-base); }

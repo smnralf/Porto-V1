@@ -14,7 +14,7 @@ const steps = [
 ];
 
 /* Lime only as accent bar/dot — step number uses it at very low opacity as decoration */
-const STEP_COLORS = ["#FF4D00", "#7C3AED", "#B6FF4D", "#FF4D00", "#7C3AED", "#B6FF4D", "#FF4D00"];
+const STEP_COLORS = ["#06B6D4", "#7C3AED", "#B6FF4D", "#06B6D4", "#7C3AED", "#B6FF4D", "#06B6D4"];
 
 export default function HowIWork() {
   return (

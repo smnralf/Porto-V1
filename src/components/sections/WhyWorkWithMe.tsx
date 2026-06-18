@@ -5,17 +5,17 @@ import RevealClip from "@/components/ui/RevealClip";
 import { Smartphone, Code2, Search, CloudUpload, Wrench, MessageSquare } from "lucide-react";
 
 const reasons = [
-  { icon: Smartphone,    title: "Responsive Design",    color: "#FF4D00", desc: "Dioptimalkan untuk tampil sempurna di semua ukuran layar." },
-  { icon: Code2,         title: "Clean Code",           color: "#7C3AED", desc: "Kode bersih, mudah dibaca, dan mudah dikembangkan." },
-  { icon: Search,        title: "Basic SEO",            color: "#B6FF4D", desc: "Struktur SEO dasar agar website mudah ditemukan." },
-  { icon: CloudUpload,   title: "Deploy Assistance",    color: "#FF4D00", desc: "Bantu proses deploy hingga website live dan siap diakses." },
-  { icon: Wrench,        title: "Maintenance Opsional", color: "#7C3AED", desc: "Layanan maintenance pasca-proyek tersedia secara opsional." },
-  { icon: MessageSquare, title: "Komunikasi Jelas",     color: "#B6FF4D", desc: "Update progress rutin, tidak perlu khawatir kehilangan info." },
+  { icon: Smartphone,    title: "Responsive Design",    color: "#06B6D4", desc: "Optimized to look perfect on all screen sizes." },
+  { icon: Code2,         title: "Clean Code",           color: "#7C3AED", desc: "Clean, readable, and easily maintainable codebase." },
+  { icon: Search,        title: "Basic SEO",            color: "#B6FF4D", desc: "Basic SEO structure to help your website get found." },
+  { icon: CloudUpload,   title: "Deploy Assistance",    color: "#06B6D4", desc: "Help with deployment process until your website is live." },
+  { icon: Wrench,        title: "Optional Maintenance", color: "#7C3AED", desc: "Post-project maintenance service available optionally." },
+  { icon: MessageSquare, title: "Clear Communication",  color: "#B6FF4D", desc: "Regular progress updates, no need to worry about being left in the dark." },
 ];
 
 export default function WhyWorkWithMe() {
   return (
-    <section id="kenapa" className="px-5 sm:px-6 lg:px-8 py-14 bg-base section-rule">
+    <section id="why-me" className="px-5 sm:px-6 lg:px-8 py-14 bg-base section-rule">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,9 +25,9 @@ export default function WhyWorkWithMe() {
           className="mb-10"
         >
           <span className="inline-block border border-white/12 bg-surface px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-muted mb-4">
-            Keunggulan
+            Advantages
           </span>
-          <h2 className="h2-display font-black text-main">Kenapa pilih saya?</h2>
+          <h2 className="h2-display font-black text-main">Why choose me?</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

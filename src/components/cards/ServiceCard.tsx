@@ -61,7 +61,7 @@ export default function ServiceCard({ service }: { service: Service }) {
           <span
             className={`text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full ${tier.popularClass}`}
           >
-            Populer
+            Popular
           </span>
         </div>
       )}
@@ -103,13 +103,13 @@ export default function ServiceCard({ service }: { service: Service }) {
             className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 text-[13px] font-bold transition-all rounded-full ${tier.btnClass}`}
           >
             <MessageCircle className="h-4 w-4" />
-            Pesan Sekarang
+            Order Now
           </a>
           <Link
             href={`/services/${service.slug}`}
             className="inline-flex items-center justify-center gap-1 text-[11px] font-semibold text-muted hover:text-main transition-colors py-0.5"
           >
-            Lihat detail <ArrowRight className="h-3 w-3" />
+            View details <ArrowRight className="h-3 w-3" />
           </Link>
         </div>
       </div>

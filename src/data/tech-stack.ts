@@ -10,36 +10,39 @@ export interface TechGroup {
 
 export const techStack: TechGroup[] = [
   {
-    category: "Frontend",
+    category: "Languages",
     items: [
-      { name: "React", level: "primary" },
-      { name: "Next.js", level: "primary" },
       { name: "TypeScript", level: "primary" },
-      { name: "Tailwind CSS", level: "primary" },
+      { name: "Python", level: "primary" },
+      { name: "Go", level: "primary" },
+      { name: "PHP", level: "secondary" },
     ],
   },
   {
-    category: "Backend",
+    category: "AI & ML",
     items: [
-      { name: "Laravel", level: "primary" },
-      { name: "PHP", level: "primary" },
+      { name: "PyTorch", level: "primary" },
+      { name: "LangChain", level: "secondary" },
+      { name: "OpenAI API", level: "primary" },
+      { name: "Pandas", level: "secondary" },
+    ],
+  },
+  {
+    category: "Web & Core",
+    items: [
+      { name: "React", level: "primary" },
+      { name: "Next.js", level: "primary" },
+      { name: "Tailwind CSS", level: "primary" },
       { name: "Node.js", level: "secondary" },
     ],
   },
   {
-    category: "Database",
+    category: "Tools & DB",
     items: [
-      { name: "MySQL", level: "primary" },
-    ],
-  },
-  {
-    category: "Tools",
-    items: [
+      { name: "MySQL / Postgres", level: "primary" },
       { name: "Git", level: "primary" },
-      { name: "GitHub", level: "primary" },
-      { name: "VS Code", level: "primary" },
-      { name: "Linux/WSL", level: "secondary" },
-      { name: "Figma", level: "secondary" },
+      { name: "Linux", level: "primary" },
+      { name: "Docker", level: "secondary" },
     ],
   },
 ];

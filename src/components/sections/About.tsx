@@ -63,12 +63,12 @@ export default function About() {
         >
           <RevealClip inline delay={0}>
             <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white mb-3">
-              Tentang Saya
+              About Me
             </span>
           </RevealClip>
           <RevealClip delay={0.08}>
             <h2 className="text-4xl sm:text-5xl font-black text-white">
-              Kenali Saya.
+              Get to Know Me.
             </h2>
           </RevealClip>
         </motion.div>
@@ -88,13 +88,13 @@ export default function About() {
             
             <div className="relative z-10">
               <h3 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-6">
-                Membangun <span className="text-[#06B6D4]">solusi nyata</span> dengan kode yang rapi.
+                Building <span className="text-[#06B6D4]">intelligent solutions</span> with robust code.
               </h3>
               <p className="text-lg text-white/70 leading-relaxed max-w-xl mb-4">
-                Saya adalah mahasiswa Informatika yang berdedikasi membangun aplikasi web modern. Tidak sekadar rapi di luar, tapi juga efisien, scalable, dan maintainable di sisi server.
+                I am an Informatics student with a deep interest in Software Engineering and Artificial Intelligence. I don't just build beautiful interfaces, but I design systems that are efficient, scalable, and intelligent.
               </p>
               <p className="text-lg text-white/70 leading-relaxed max-w-xl">
-                Terbiasa dengan ekosistem <strong>React / Next.js</strong> di frontend, serta <strong>PHP / Laravel / Go</strong> untuk mengamankan data dan logika di backend.
+                Experienced with <strong>React / Next.js</strong>, as well as <strong>Go / Python</strong> for data processing, model training, and securing backend logic.
               </p>
             </div>
 
@@ -131,7 +131,7 @@ export default function About() {
             <div className="text-6xl font-black text-white drop-shadow-[0_0_15px_rgba(139,92,246,0.5)] mb-2 relative z-10">
               <CountUp from={0} to={5} suffix="+" />
             </div>
-            <p className="text-sm font-bold text-white/60 uppercase tracking-widest relative z-10">Project Selesai</p>
+            <p className="text-sm font-bold text-white/60 uppercase tracking-widest relative z-10">Completed Projects</p>
           </motion.div>
 
           {/* Cell 4: Tech Stack (Marquee alternative) */}
@@ -145,12 +145,23 @@ export default function About() {
             <h4 className="text-sm font-bold text-white/50 uppercase tracking-widest mb-4 flex items-center gap-2">
               <Code2 className="h-4 w-4" /> Tech Stack
             </h4>
-            <div className="flex flex-wrap gap-2">
-              {["Next.js", "React", "TypeScript", "Tailwind CSS", "Laravel", "PHP", "Golang", "Node.js", "MySQL", "Git", "Figma", "Linux"].map((tech, i) => (
-                <span key={i} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/80 hover:bg-white/10 hover:text-white transition-colors cursor-default">
-                  {tech}
-                </span>
-              ))}
+            <div className="flex flex-col gap-3">
+              <div>
+                <span className="text-xs font-semibold text-[#06B6D4] block mb-1">Languages & Core</span>
+                <div className="flex flex-wrap gap-1.5">
+                  {["Go", "Python", "TypeScript", "PHP"].map((t) => (
+                    <span key={t} className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-medium text-white/80">{t}</span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <span className="text-xs font-semibold text-[#8B5CF6] block mb-1">AI & Web Ecosystem</span>
+                <div className="flex flex-wrap gap-1.5">
+                  {["PyTorch", "Next.js", "React", "LangChain"].map((t) => (
+                    <span key={t} className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs font-medium text-white/80">{t}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -163,9 +174,9 @@ export default function About() {
             className="md:col-span-1 md:row-span-1 rounded-3xl border border-[#FF4D4D]/20 bg-[#FF4D4D]/5 backdrop-blur-md p-8 flex flex-col justify-center items-start"
           >
             <Flame className="h-8 w-8 text-[#FF4D4D] mb-4" />
-            <h4 className="text-xl font-bold text-white mb-2">Selalu Belajar</h4>
+            <h4 className="text-xl font-bold text-white mb-2">Always Learning</h4>
             <p className="text-sm text-white/70 leading-relaxed">
-              Teknologi berkembang cepat. Fokus saat ini: menguasai arsitektur backend skala besar dengan Go.
+              Technology evolves rapidly. My current focus: integrating AI Agents and Machine Learning into modern large-scale software architectures.
             </p>
           </motion.div>
 

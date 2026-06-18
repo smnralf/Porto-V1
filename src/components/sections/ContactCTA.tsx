@@ -15,13 +15,13 @@ export default function ContactCTA() {
           className="flex flex-col gap-8"
         >
           <h2 className="text-5xl sm:text-7xl md:text-8xl font-black text-white leading-[1.05] tracking-tighter">
-            Mari ciptakan <br className="hidden sm:block" />
-            <span className="text-[#06B6D4]">sesuatu yang nyata.</span>
+            Let's create <br className="hidden sm:block" />
+            <span className="text-[#06B6D4]">something real.</span>
           </h2>
           
           <p className="text-lg sm:text-xl text-white/50 max-w-3xl font-light leading-relaxed">
-            Sedang butuh website landing page, company profile, atau admin panel? 
-            Atau sekadar diskusi teknis dan kolaborasi? Pintu saya selalu terbuka.
+            Need a landing page, company profile, or admin panel? 
+            Or just want to discuss tech and collaborate? My doors are always open.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -29,14 +29,14 @@ export default function ContactCTA() {
               href="/services"
               className="group relative inline-flex items-center justify-center gap-3 rounded-full bg-white px-8 py-4 text-[15px] font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.15)]"
             >
-              Lihat Layanan
+              View Services
               <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Link>
             
             <a
-              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo Mas Soma, saya mau ngobrol soal...")}`}
+              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Hello Soma, I want to talk about...")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-[15px] font-bold text-white backdrop-blur-md transition-colors hover:bg-white/10 hover:border-white/20"

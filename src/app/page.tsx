@@ -9,7 +9,7 @@ import ContactCTA from "@/components/sections/ContactCTA";
 export const metadata: Metadata = {
   title: "smnralf — Web Developer",
   description:
-    "Portfolio smnralf — mahasiswa Informatika dan web developer yang fokus membangun antarmuka bersih, responsif, dan fungsional. Dari frontend sampai backend.",
+    "smnralf Portfolio — Computer Science student and web developer focused on building clean, responsive, and functional interfaces. From frontend to backend.",
 };
 
 export default function HomePage() {
@@ -18,6 +18,7 @@ export default function HomePage() {
       <Hero />
       <ProjectTeaser />
       <About />
+      <TechStack />
       <Timeline />
       <ContactCTA />
     </>

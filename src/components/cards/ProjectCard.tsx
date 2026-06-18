@@ -95,7 +95,7 @@ function MockUI({ accent, pattern }: { accent: string; pattern: "grid" | "list" 
 }
 
 function Thumbnail({ project }: { project: Project }) {
-  const t = THUMB[project.category] ?? { bg: "#111", accent: "#FF4D00", pattern: "list" as const };
+  const t = THUMB[project.category] ?? { bg: "#111", accent: "#06B6D4", pattern: "list" as const };
   const sc = STATUS_STYLE[project.status] ?? STATUS_STYLE["Concept"];
   const firstScreenshot = project.screenshots?.[0];
 

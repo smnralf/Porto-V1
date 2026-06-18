@@ -27,178 +27,178 @@ export const services: Service[] = [
     slug: "landing-page",
     title: "Landing Page",
     shortDescription:
-      "Untuk halaman promosi sederhana, produk, event, campaign, atau personal link.",
+      "For simple promotional pages, products, events, campaigns, or personal links.",
     longDescription:
-      "Landing page adalah solusi cepat dan efektif untuk mempromosikan produk, event, atau campaign bisnis Anda. Dengan desain yang menarik dan CTA yang jelas, landing page membantu mengkonversi pengunjung menjadi pelanggan.",
-    price: "Mulai dari Rp500.000",
-    estimatedTimeline: "3–5 hari kerja",
+      "A landing page is a fast and effective solution to promote your products, events, or business campaigns. With an attractive design and clear CTAs, landing pages help convert visitors into customers.",
+    price: "Starting from Rp500.000",
+    estimatedTimeline: "3–5 working days",
     includes: [
-      "1 halaman landing page",
-      "Responsive mobile",
-      "CTA WhatsApp",
-      "Section basic",
-      "Revisi 1x",
-      "Deploy basic",
+      "1 landing page",
+      "Responsive mobile design",
+      "WhatsApp CTA",
+      "Basic sections",
+      "1x Revision",
+      "Basic deployment",
     ],
     forWho: [
-      "UMKM yang ingin mempromosikan produk",
-      "Event organizer untuk halaman event",
-      "Personal brand yang butuh link-in-bio premium",
-      "Campaign marketing yang butuh landing page cepat",
+      "SMEs wanting to promote a product",
+      "Event organizers needing an event page",
+      "Personal brands needing a premium link-in-bio",
+      "Marketing campaigns requiring a quick landing page",
     ],
     faqs: [
       {
-        question: "Apakah sudah termasuk domain dan hosting?",
+        question: "Is domain and hosting included?",
         answer:
-          "Belum termasuk. Harga domain dan hosting akan disepakati terpisah sesuai kebutuhan. Saya bisa membantu proses setup-nya.",
+          "Not yet. Domain and hosting costs will be agreed upon separately based on needs. I can assist with the setup process.",
       },
       {
-        question: "Berapa lama proses pengerjaannya?",
+        question: "How long does the process take?",
         answer:
-          "Estimasi 3–5 hari kerja tergantung kelengkapan konten yang disiapkan klien.",
+          "Estimated 3–5 working days depending on the completeness of the content provided.",
       },
       {
-        question: "Apakah bisa request desain dari nol?",
+        question: "Can I request a design from scratch?",
         answer:
-          "Bisa. Saya akan menyesuaikan desain dengan brand dan preferensi Anda.",
+          "Yes. I will tailor the design to your brand and preferences.",
       },
     ],
     whatsappMessage:
-      "Halo, saya tertarik dengan layanan Landing Page. Boleh info lebih lanjut?",
+      "Hello, I am interested in the Landing Page service. Could I get more information?",
   },
   {
-    slug: "web-statis-company-profile",
-    title: "Web Statis / Company Profile",
+    slug: "static-web-company-profile",
+    title: "Static Web / Company Profile",
     shortDescription:
-      "Untuk company profile, portfolio bisnis, dan website informasi 3–5 halaman.",
+      "For company profiles, business portfolios, and informational websites with 3–5 pages.",
     longDescription:
-      "Website company profile profesional untuk membangun kredibilitas bisnis Anda secara online. Tampilkan profil, layanan, dan kontak bisnis dalam satu website yang elegan dan informatif.",
-    price: "Mulai dari Rp3.500.000",
-    estimatedTimeline: "7–14 hari kerja",
+      "A professional company profile website to build your business's online credibility. Display your profile, services, and business contacts in one elegant and informative website.",
+    price: "Starting from Rp3.500.000",
+    estimatedTimeline: "7–14 working days",
     includes: [
-      "3–5 halaman",
-      "Desain modern",
-      "Responsive mobile",
+      "3–5 pages",
+      "Modern design",
+      "Responsive mobile design",
       "Basic SEO",
-      "Form kontak / WhatsApp integration",
-      "Revisi 2x",
-      "Deploy",
+      "Contact form / WhatsApp integration",
+      "2x Revisions",
+      "Deployment",
     ],
     forWho: [
-      "Bisnis yang ingin tampil profesional secara online",
-      "UMKM yang membutuhkan company profile digital",
-      "Freelancer atau konsultan yang butuh portfolio online",
-      "Organisasi yang butuh website informasi",
+      "Businesses looking to establish a professional online presence",
+      "SMEs needing a digital company profile",
+      "Freelancers or consultants needing an online portfolio",
+      "Organizations needing an informational website",
     ],
     faqs: [
       {
-        question: "Apakah sudah termasuk domain dan hosting?",
+        question: "Is domain and hosting included?",
         answer:
-          "Belum termasuk. Biaya domain dan hosting akan dibahas terpisah sesuai kebutuhan.",
+          "Not yet. Domain and hosting costs will be discussed separately based on needs.",
       },
       {
-        question: "Apa yang dimaksud basic SEO?",
+        question: "What does basic SEO entail?",
         answer:
-          "Meliputi meta title, meta description, heading structure, dan sitemap dasar untuk membantu website ditemukan di mesin pencari.",
+          "It covers meta titles, meta descriptions, heading structures, and a basic sitemap to help your website get discovered on search engines.",
       },
       {
-        question: "Bagaimana jika saya butuh lebih dari 5 halaman?",
+        question: "What if I need more than 5 pages?",
         answer:
-          "Bisa dikustomisasi. Harga akan menyesuaikan jumlah halaman tambahan.",
+          "It can be customized. The price will adjust based on the number of additional pages.",
       },
     ],
     whatsappMessage:
-      "Halo, saya tertarik dengan layanan Web Statis / Company Profile. Boleh info lebih lanjut?",
+      "Hello, I am interested in the Static Web / Company Profile service. Could I get more information?",
     highlighted: true,
   },
   {
-    slug: "web-dinamis-admin-panel",
-    title: "Web Dinamis / Admin Panel",
+    slug: "dynamic-web-admin-panel",
+    title: "Dynamic Web / Admin Panel",
     shortDescription:
-      "Untuk website dengan login, dashboard, database, dan pengelolaan data.",
+      "For websites with logins, dashboards, databases, and data management.",
     longDescription:
-      "Website dinamis lengkap dengan sistem manajemen konten, panel admin, dan database. Cocok untuk bisnis yang membutuhkan pengelolaan data secara mandiri tanpa membutuhkan developer setiap saat.",
-    price: "Mulai dari Rp6.500.000",
-    estimatedTimeline: "14–30 hari kerja",
+      "A complete dynamic website with a content management system, admin panel, and database. Ideal for businesses that need to manage their data independently without constantly relying on a developer.",
+    price: "Starting from Rp6.500.000",
+    estimatedTimeline: "14–30 working days",
     includes: [
-      "Login admin",
+      "Admin login",
       "Dashboard",
-      "CRUD data",
+      "CRUD operations",
       "Database",
-      "Upload gambar/file",
+      "Image/file uploads",
       "Responsive layout",
-      "Revisi 3x",
-      "Deploy",
+      "3x Revisions",
+      "Deployment",
     ],
     forWho: [
-      "Bisnis yang butuh pengelolaan data mandiri",
-      "Toko online sederhana dengan manajemen produk",
-      "Sekolah atau instansi yang butuh sistem informasi",
-      "Startup yang membutuhkan MVP cepat",
+      "Businesses that need independent data management",
+      "Simple online stores with product management",
+      "Schools or institutions needing an information system",
+      "Startups requiring a quick MVP",
     ],
     faqs: [
       {
-        question: "Teknologi apa yang digunakan?",
+        question: "What technologies are used?",
         answer:
-          "Tergantung kebutuhan. Bisa menggunakan Next.js, Laravel, PHP Native, atau kombinasi sesuai requirement.",
+          "It depends on your needs. I use Next.js, Laravel, Native PHP, or a combination depending on the requirements.",
       },
       {
-        question: "Apakah bisa integrasi dengan payment gateway?",
+        question: "Can it be integrated with a payment gateway?",
         answer:
-          "Bisa, namun akan ada biaya tambahan tergantung kompleksitas integrasi.",
+          "Yes, but there will be an additional cost depending on the complexity of the integration.",
       },
       {
-        question: "Berapa lama proses pengerjaan?",
+        question: "How long does the development take?",
         answer:
-          "Estimasi 14–30 hari kerja tergantung kompleksitas fitur yang dibutuhkan.",
+          "Estimated 14–30 working days depending on the complexity of the required features.",
       },
     ],
     whatsappMessage:
-      "Halo, saya tertarik dengan layanan Web Dinamis / Admin Panel. Boleh info lebih lanjut?",
+      "Hello, I am interested in the Dynamic Web / Admin Panel service. Could I get more information?",
   },
   {
     slug: "custom-web-app",
     title: "Custom Web App",
     shortDescription:
-      "Untuk sistem custom sesuai kebutuhan bisnis atau workflow tertentu.",
+      "For custom systems tailored to specific business needs or workflows.",
     longDescription:
-      "Solusi pengembangan web custom untuk kebutuhan bisnis spesifik yang tidak terpenuhi oleh solusi standar. Dari sistem manajemen, integrasi API pihak ketiga, hingga aplikasi web kompleks — semua bisa dikustomisasi sesuai kebutuhan.",
+      "Custom web development solutions for specific business needs that are not met by standard solutions. From management systems and third-party API integrations to complex web applications—everything can be customized to your requirements.",
     price: "By Request",
-    estimatedTimeline: "Menyesuaikan scope",
+    estimatedTimeline: "Adapts to scope",
     includes: [
-      "Fitur custom",
-      "Role user/admin",
-      "Integrasi API",
+      "Custom features",
+      "User/Admin roles",
+      "API integrations",
       "Database design",
       "Dashboard",
-      "Dokumentasi basic",
-      "Scope menyesuaikan kebutuhan",
+      "Basic documentation",
+      "Scope tailored to needs",
     ],
     forWho: [
-      "Bisnis dengan kebutuhan sistem yang spesifik",
-      "Perusahaan yang butuh integrasi antar sistem",
-      "Startup yang butuh produk digital dari nol",
-      "Tim internal yang butuh tools khusus",
+      "Businesses with specific system requirements",
+      "Companies needing system-to-system integrations",
+      "Startups building digital products from scratch",
+      "Internal teams needing specialized tools",
     ],
     faqs: [
       {
-        question: "Bagaimana cara menentukan harga untuk custom app?",
+        question: "How is the pricing determined for a custom app?",
         answer:
-          "Harga ditentukan setelah diskusi mendalam mengenai scope, fitur, timeline, dan kompleksitas proyek. Akan ada proposal tertulis sebelum pengerjaan dimulai.",
+          "Pricing is determined after an in-depth discussion about the scope, features, timeline, and project complexity. A written proposal will be provided before work begins.",
       },
       {
-        question: "Apakah ada garansi setelah proyek selesai?",
+        question: "Is there a warranty after the project is finished?",
         answer:
-          "Ada masa garansi bug-fix selama 30 hari setelah serah terima proyek.",
+          "Yes, there is a 30-day bug-fix warranty period after the project handover.",
       },
       {
-        question: "Apakah bisa dikerjakan secara bertahap?",
+        question: "Can the project be done in phases?",
         answer:
-          "Bisa. Pengerjaan bisa dibagi dalam fase/sprint sesuai prioritas fitur.",
+          "Yes. The development can be split into phases/sprints based on feature priorities.",
       },
     ],
     whatsappMessage:
-      "Halo, saya tertarik dengan layanan Custom Web App. Boleh diskusi lebih lanjut mengenai kebutuhan saya?",
+      "Hello, I am interested in the Custom Web App service. Can we discuss my requirements?",
   },
 ];
 

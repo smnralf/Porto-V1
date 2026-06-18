@@ -5,33 +5,33 @@ export interface FAQ {
 
 export const faqs: FAQ[] = [
   {
-    question: "Apakah harga sudah termasuk domain dan hosting?",
+    question: "Does the price include domain and hosting?",
     answer:
-      "Belum termasuk. Harga yang tertera adalah biaya jasa pembuatan website. Biaya domain dan hosting akan dibahas terpisah sesuai kebutuhan dan preferensi Anda. Saya siap membantu proses pemilihan dan setup-nya.",
+      "Not yet. The listed price is for the website development service. Domain and hosting costs will be discussed separately based on your needs and preferences. I can assist with the selection and setup process.",
   },
   {
-    question: "Apakah bisa revisi?",
+    question: "Do you offer revisions?",
     answer:
-      "Bisa. Setiap paket sudah menyertakan jumlah revisi tertentu. Revisi tambahan di luar ketentuan bisa didiskusikan dengan biaya tambahan yang disepakati.",
+      "Yes. Each package includes a specific number of revisions. Additional revisions beyond the limit can be discussed with an agreed-upon extra fee.",
   },
   {
-    question: "Berapa lama pengerjaan website?",
+    question: "How long does the development take?",
     answer:
-      "Tergantung paket dan kompleksitas. Landing page biasanya 3–5 hari kerja, company profile 7–14 hari kerja, web dinamis 14–30 hari kerja. Timeline pasti akan dikonfirmasi setelah diskusi awal.",
+      "It depends on the package and complexity. A landing page usually takes 3–5 working days, a company profile 7–14 working days, and dynamic web apps 14–30 working days. The exact timeline will be confirmed after our initial discussion.",
   },
   {
-    question: "Apakah bisa maintenance setelah website selesai?",
+    question: "Do you provide maintenance after the website is finished?",
     answer:
-      "Bisa. Layanan maintenance tersedia secara opsional dengan biaya bulanan yang disepakati. Meliputi update konten, backup rutin, dan perbaikan bug kecil.",
+      "Yes. Maintenance services are available optionally for an agreed monthly fee. This covers content updates, regular backups, and minor bug fixes.",
   },
   {
-    question: "Apakah bisa request fitur custom?",
+    question: "Can I request custom features?",
     answer:
-      "Tentu bisa. Semua kebutuhan custom bisa didiskusikan sebelum pengerjaan dimulai. Harga akan disesuaikan dengan kompleksitas fitur yang diminta.",
+      "Absolutely. All custom requirements can be discussed before the project begins. Pricing will be adjusted according to the complexity of the requested features.",
   },
   {
-    question: "Apakah bisa dibuatkan desain dari nol?",
+    question: "Can you design from scratch?",
     answer:
-      "Bisa. Saya akan berdiskusi mengenai referensi desain, warna brand, dan preferensi visual Anda untuk membuat desain yang sesuai. Jika memiliki desain sendiri (Figma/XD), bisa langsung digunakan.",
+      "Yes. I will discuss design references, brand colors, and your visual preferences to create a fitting design. If you already have your own design (Figma/XD), we can use that directly.",
   },
 ];

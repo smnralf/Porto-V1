@@ -52,7 +52,7 @@ export default async function ProjectDetailPage(props: PageProps<"/projects/[slu
         <div className="relative z-10 w-full px-5 sm:px-6 lg:px-8 pb-12 mx-auto max-w-7xl">
           <Link href="/projects"
             className="inline-flex items-center gap-2 text-sm font-semibold text-white/60 hover:text-white transition-colors mb-8 backdrop-blur-md bg-white/5 px-4 py-2 rounded-full border border-white/10 w-fit">
-            <ArrowLeft className="h-4 w-4" /> Kembali ke Projects
+            <ArrowLeft className="h-4 w-4" /> Back to Projects
           </Link>
 
           <div className="flex flex-wrap items-center gap-3 mb-5">

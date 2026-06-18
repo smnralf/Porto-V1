@@ -16,15 +16,15 @@ export default function FeaturedProjects() {
         <div className="mx-auto max-w-6xl flex items-center justify-between">
           <div className="flex items-center gap-4">
             <span className="inline-block border border-velvet/30 bg-velvet/10 px-3 py-1 text-[0.65rem] font-black uppercase tracking-widest text-velvet">
-              Hasil Kerja
+              Work
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-main tracking-tight">
-              Project pilihan.
+              Featured projects.
             </h2>
           </div>
           <Link href="/projects"
             className="hidden sm:inline-flex items-center gap-2 text-[12px] font-black text-main underline underline-offset-2 hover:text-ember transition-colors">
-            Semua <ArrowRight className="h-3.5 w-3.5" />
+            View All <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function FeaturedProjects() {
           <div className="mt-6 sm:hidden">
             <Link href="/projects"
               className="inline-flex items-center gap-2 border border-white/15 bg-surface px-5 py-2.5 text-[13px] font-black text-main">
-              Semua Project <ArrowRight className="h-3.5 w-3.5" />
+              View All Projects <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </div>

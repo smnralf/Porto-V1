@@ -3,8 +3,8 @@ import { projects } from "@/data/projects";
 import ProjectCard from "@/components/cards/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "Project",
-  description: "Kumpulan project web — case study, prototype, dan konsep produk digital.",
+  title: "Projects",
+  description: "A collection of web projects — case studies, prototypes, and digital product concepts.",
 };
 
 export default function ProjectsPage() {
@@ -21,10 +21,10 @@ export default function ProjectsPage() {
             Portfolio
           </span>
           <h1 className="text-5xl sm:text-7xl font-black text-white tracking-tight leading-tight mb-4 drop-shadow-lg">
-            Semua Project.
+            All Projects.
           </h1>
           <p className="text-lg text-white/70 max-w-2xl font-medium leading-relaxed">
-            Case study, prototype, dan konsep — eksperimen serta karya nyata yang mendemonstrasikan proses problem-solving melalui kode.
+            Case studies, prototypes, and concepts — experiments and real works demonstrating problem-solving through code.
           </p>
         </div>
       </div>

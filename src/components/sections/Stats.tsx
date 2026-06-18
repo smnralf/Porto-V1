@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "5+",   label: "Project Selesai",  accent: "#FF4D00" },
-  { value: "3+",   label: "Klien Dilayani",   accent: "#7C3AED" },
-  { value: "4",    label: "Paket Layanan",     accent: "#FF4D00" },
-  { value: "100%", label: "Komitmen Kualitas", accent: "#7C3AED" },
+  { value: "5+",   label: "Projects Completed",  accent: "#06B6D4" },
+  { value: "3+",   label: "Clients Served",   accent: "#7C3AED" },
+  { value: "4",    label: "Service Packages",     accent: "#06B6D4" },
+  { value: "100%", label: "Quality Commitment", accent: "#7C3AED" },
 ];
 
 export default function Stats() {

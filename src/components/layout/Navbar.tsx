@@ -7,8 +7,9 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/projects", label: "Project" },
-  { href: "/services", label: "Layanan" },
+  { href: "/projects", label: "Projects" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
 ];
 
 export default function Navbar() {
@@ -69,19 +70,19 @@ export default function Navbar() {
 
           <div className="hidden md:block">
             <a
-              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
+              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Hello, I would like to discuss.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-[13px] font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(255,255,255,0.1)]"
             >
-              Hubungi Saya
+              Contact Me
             </a>
           </div>
 
           <button
             onClick={() => setOpen((v) => !v)}
             className="md:hidden p-2 text-main"
-            aria-label={open ? "Tutup menu" : "Buka menu"}
+            aria-label={open ? "Close menu" : "Open menu"}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -107,12 +108,12 @@ export default function Navbar() {
               );
             })}
             <a
-              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
+              href={`https://wa.me/6285176828884?text=${encodeURIComponent("Hello, I would like to discuss.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-bold text-black shadow-[0_0_15px_rgba(255,255,255,0.1)]"
             >
-              Hubungi Saya
+              Contact Me
             </a>
           </div>
         </div>

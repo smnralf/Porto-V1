@@ -88,7 +88,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: d(0.5), ease: [0.16, 1, 0.3, 1] }}
           className="text-base sm:text-xl lg:text-2xl text-muted max-w-2xl font-light tracking-wide leading-relaxed"
         >
-          Soma Nur Alif — <span className="font-medium text-white">Fullstack Web Developer</span> merakit pengalaman digital yang elegan, responsif, dan fungsional.
+          Soma Nur Alif — <span className="font-medium text-white">Software Engineer & AI Enthusiast</span> building intelligent, scalable, and functional digital ecosystems.
         </motion.p>
 
         {/* CTAs */}
@@ -100,16 +100,16 @@ export default function Hero() {
         >
           <Link href="/projects"
             className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-black transition-transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
-            Lihat Project 
+            View Projects 
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
           <a
-            href={`https://wa.me/6285176828884?text=${encodeURIComponent("Halo, saya ingin berdiskusi.")}`}
+            href={`https://wa.me/6285176828884?text=${encodeURIComponent("Hello, I would like to discuss a project.")}`}
             target="_blank" rel="noopener noreferrer"
             className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/10 hover:border-white/20"
           >
             <MessageCircle className="h-4 w-4" />
-            Mari Berdiskusi
+            Let's Talk
           </a>
         </motion.div>
       </div>

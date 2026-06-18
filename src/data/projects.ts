@@ -23,22 +23,22 @@ export const projects: Project[] = [
     slug: "dashboard-xauusd-concept",
     title: "Dashboard XAUUSD",
     shortDescription:
-      "Dashboard analisis fundamental XAUUSD untuk mendukung pemahaman arah pergerakan harga emas secara real-time.",
+      "Fundamental analysis dashboard for XAUUSD to support understanding of gold price movements in real-time.",
     longDescription:
-      "Dashboard analitik yang membantu trader memahami faktor-faktor fundamental yang mempengaruhi pergerakan harga XAUUSD (Gold/USD). Dashboard ini menampilkan data makroekonomi dari FRED, harga live dari Yahoo Finance, dan prediksi arah harga menggunakan machine learning dalam satu tampilan terintegrasi.",
+      "An analytical dashboard that helps traders understand the fundamental factors affecting XAUUSD (Gold/USD) price movements. This dashboard displays macroeconomic data from FRED, live prices from Yahoo Finance, and price direction predictions using machine learning in a single integrated view.",
     problem:
-      "Trader XAUUSD biasanya pusing karena harus buka banyak tab — berita, kalender ekonomi, chart — bikin ribet dan telat ngambil keputusan.",
+      "XAUUSD traders often struggle because they have to open many tabs—news, economic calendars, charts—making it complicated and delaying their decision-making.",
     solution:
-      "Saya bikin dashboard pakai Next.js & FastAPI buat nyatuin semua data makroekonomi, harga live emas, plus prediksi arah harga pakai Random Forest dalam satu layar.",
+      "I built a dashboard using Next.js & FastAPI to combine all macroeconomic data, live gold prices, plus price direction predictions using Random Forest in a single screen.",
     result:
-      "Menghasilkan sebuah konsep dashboard interaktif yang berpotensi memangkas waktu riset trader secara drastis dengan menyajikan data fundamental dan prediktif dalam satu layar ringkas.",
+      "Produced an interactive dashboard concept with the potential to drastically cut traders' research time by presenting fundamental and predictive data in one concise screen.",
     techStack: ["Next.js 16", "TypeScript", "FastAPI", "Python", "scikit-learn", "Recharts", "pandas", "yfinance"],
     features: [
-      "Visualisasi data fundamental XAUUSD",
-      "Indikator makroekonomi (CPI, NFP, dll)",
-      "Sentimen pasar real-time (konsep)",
-      "Dashboard interaktif",
-      "Desain UI/UX modern",
+      "XAUUSD fundamental data visualization",
+      "Macroeconomic indicators (CPI, NFP, etc.)",
+      "Real-time market sentiment (concept)",
+      "Interactive dashboard",
+      "Modern UI/UX design",
     ],
     screenshots: [
       "/screenshots/dashboard-xauusd-concept/preview-1.png",
@@ -54,22 +54,22 @@ export const projects: Project[] = [
   {
     slug: "hris",
     title: "HRIS",
-    shortDescription: "Sistem Human Resource Information System untuk manajemen data karyawan, absensi, dan penggajian berbasis web.",
+    shortDescription: "A web-based Human Resource Information System for employee data management, attendance, and payroll.",
     longDescription:
-      "HRIS adalah aplikasi web berbasis Laravel yang dirancang untuk membantu perusahaan dalam mengelola data karyawan, pencatatan absensi, dan proses penggajian secara terpusat dan efisien.",
+      "HRIS is a web-based application built with Laravel designed to help companies manage employee data, attendance tracking, and payroll processes centrally and efficiently.",
     problem:
-      "Banyak perusahaan masih pakai sistem absen dan hitung gaji manual pakai Excel. Rawan error dan bikin HRD pusing tiap akhir bulan.",
+      "Many companies still use manual attendance and payroll systems using Excel. It's prone to errors and gives HR a headache at the end of every month.",
     solution:
-      "Saya bangun sistem HRIS full-stack pakai Laravel buat otomasi semuanya — dari absen harian sampai slip gaji otomatis, beres dalam satu platform.",
+      "I built a full-stack HRIS system using Laravel to automate everything—from daily attendance to automated payslips, all handled in one platform.",
     result:
-      "Proses manajemen data karyawan menjadi terotomatisasi, mengurangi human-error dalam perhitungan absensi dan penggajian, serta memudahkan akses informasi secara transparan bagi seluruh karyawan.",
+      "The employee data management process became automated, reducing human error in attendance and payroll calculations, and making information access transparent for all employees.",
     techStack: ["PHP", "Laravel", "Tailwind CSS", "JavaScript", "AJAX", "MySQL"],
     features: [
-      "Manajemen data karyawan",
-      "Pencatatan absensi harian",
-      "Pengelolaan penggajian",
-      "Dashboard laporan HR",
-      "Role admin & karyawan",
+      "Employee data management",
+      "Daily attendance tracking",
+      "Payroll management",
+      "HR reporting dashboard",
+      "Admin & employee roles",
     ],
     screenshots: [
       "/screenshots/hris/Hris1.png",
@@ -86,22 +86,22 @@ export const projects: Project[] = [
   {
     slug: "sehatin",
     title: "Sehatin",
-    shortDescription: "Website pengingat jadwal minum obat berbasis web.",
+    shortDescription: "A web-based medication schedule reminder application.",
     longDescription:
-      "Sehatin adalah aplikasi web yang membantu pengguna mengingat jadwal minum obat secara teratur. Dirancang dengan antarmuka yang sederhana dan mudah digunakan oleh semua kalangan, termasuk lansia.",
+      "Sehatin is a web application that helps users remember to take their medication on time. Designed with a simple and accessible interface for all ages, including the elderly.",
     problem:
-      "Orang tua atau lansia sering banget lupa minum obat. Sekalinya lupa, efek pengobatannya jadi berantakan.",
+      "The elderly often forget to take their medication. Once forgotten, the effectiveness of the treatment is compromised.",
     solution:
-      "Bikin web app super simpel yang bisa diakses langsung dari browser HP tanpa install apa-apa, khusus buat ngingetin jadwal obat otomatis.",
+      "Built a super simple web app that can be accessed directly from a mobile browser without installing anything, specifically to automatically remind users of their medication schedule.",
     result:
-      "Menghasilkan aplikasi pengingat yang sangat ramah pengguna dengan notifikasi tepat waktu, membantu pengguna (khususnya lansia) untuk terus mematuhi jadwal minum obat mereka.",
+      "Produced a highly user-friendly reminder app with timely notifications, helping users (especially the elderly) to consistently stick to their medication schedule.",
     techStack: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
     features: [
-      "Pengingat jadwal minum obat",
-      "Manajemen daftar obat",
-      "Riwayat konsumsi obat",
-      "Antarmuka sederhana dan intuitif",
-      "Notifikasi pengingat",
+      "Medication schedule reminder",
+      "Medication list management",
+      "Medication history tracking",
+      "Simple and intuitive interface",
+      "Reminder notifications",
     ],
     screenshots: [],
     liveUrl: undefined,
@@ -113,20 +113,20 @@ export const projects: Project[] = [
   {
     slug: "company-profile-demo",
     title: "Company Profile Demo",
-    shortDescription: "Website company profile modern untuk bisnis atau UMKM.",
+    shortDescription: "A modern company profile website for businesses or SMEs.",
     longDescription:
-      "Demo website company profile modern yang dibangun dengan Next.js dan Tailwind CSS. Cocok sebagai referensi desain untuk bisnis atau UMKM yang ingin tampil profesional di dunia digital.",
+      "A modern company profile website demo built with Next.js and Tailwind CSS. Perfect as a design reference for businesses or SMEs looking for a professional digital presence.",
     problem:
-      "Masih banyak UMKM lokal yang belum punya website gara-gara mikir bikin web itu mahal dan ribet, akhirnya kalah saing di Google.",
+      "Many local SMEs still don't have a website because they think building one is expensive and complicated, resulting in lost visibility on Google.",
     solution:
-      "Saya rakit template modern pakai Next.js biar performanya ngebut. UMKM tinggal pakai, ganti teks & foto, langsung kelihatan profesional.",
+      "I assembled a modern template using Next.js for blazing fast performance. SMEs can easily use it, replace text & photos, and instantly look professional.",
     result:
-      "Terciptanya sebuah template dasar berkualitas tinggi yang mempercepat proses pembuatan website profesional untuk UMKM, dilengkapi dengan desain responsif dan skor performa yang optimal.",
+      "Created a high-quality base template that accelerates the process of building a professional website for SMEs, complete with a responsive design and optimal performance scores.",
     techStack: ["Next.js", "Tailwind CSS"],
     features: [
-      "Desain modern dan responsif",
-      "Halaman beranda, tentang, layanan, dan kontak",
-      "Performa tinggi dengan Next.js",
+      "Modern and responsive design",
+      "Home, about, services, and contact pages",
+      "High performance with Next.js",
       "SEO-friendly",
       "Mobile-first design",
     ],
@@ -140,24 +140,24 @@ export const projects: Project[] = [
   {
     slug: "nextpos",
     title: "NextPos",
-    shortDescription: "Aplikasi Point of Sale berbasis web dengan manajemen barang, kasir, laporan penjualan, dan autentikasi pengguna. Dibangun dengan Laravel 12 dan Tailwind CSS.",
+    shortDescription: "A web-based Point of Sale application with inventory management, cashier, sales reporting, and user authentication. Built with Laravel 12 and Tailwind CSS.",
     longDescription:
-      "NextPos adalah aplikasi POS (Point of Sale) dan manajemen stok berbasis web yang dibangun dengan Laravel 12. Terdapat dua role pengguna — admin untuk mengelola barang, stok, dan laporan, serta kasir untuk memproses transaksi penjualan. Dilengkapi autentikasi via Laravel Breeze dan antarmuka responsif dengan Tailwind CSS.",
+      "NextPos is a web-based POS (Point of Sale) and inventory management application built with Laravel 12. It features two user roles—an admin to manage items, inventory, and reports, and a cashier to process sales transactions. It includes authentication via Laravel Breeze and a responsive interface using Tailwind CSS.",
     problem:
-      "Kasir manual atau aplikasi POS jadul sering lemot, susah sinkron sama sisa stok gudang, dan laporan penjualannya nggak real-time.",
+      "Manual cashiers or outdated POS apps are often slow, hard to sync with warehouse inventory, and their sales reports aren't real-time.",
     solution:
-      "Saya garap aplikasi kasir (POS) pakai Laravel 12 + Tailwind yang ringan. Ada fitur kasir buat jaga toko, dan dashboard buat bos mantau untung rugi.",
+      "I developed a lightweight POS application using Laravel 12 + Tailwind. It features a cashier interface for store operations and a dashboard for owners to monitor profits.",
     result:
-      "Aplikasi berhasil mengintegrasikan modul kasir dan stok, memberikan kemudahan bagi pemilik bisnis untuk memantau penjualan harian serta sisa barang secara real-time dari mana saja.",
+      "The app successfully integrates the cashier and inventory modules, providing business owners with an easy way to monitor daily sales and remaining inventory in real-time from anywhere.",
     techStack: ["Laravel 12", "PHP 8.2", "Tailwind CSS", "Alpine.js", "MySQL", "Blade", "Vite"],
     features: [
-      "Role admin & kasir dengan akses berbeda",
-      "Manajemen barang dan stok",
-      "Proses transaksi kasir real-time",
-      "Riwayat transaksi lengkap",
-      "Laporan penjualan harian & bulanan",
-      "Dashboard ringkasan bisnis",
-      "Autentikasi pengguna (Laravel Breeze)",
+      "Distinct admin & cashier roles",
+      "Item and inventory management",
+      "Real-time cashier transactions",
+      "Comprehensive transaction history",
+      "Daily & monthly sales reports",
+      "Business overview dashboard",
+      "User authentication (Laravel Breeze)",
     ],
     screenshots: [
       "/screenshots/nextpos/preview-1.png",
